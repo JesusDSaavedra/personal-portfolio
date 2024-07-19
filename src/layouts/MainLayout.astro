@@ -1,0 +1,27 @@
+---
+import '@/styles/globals.css'
+
+import Layout from '@/layouts/Layout.astro'
+import Navbar from '@/components/sections-layout/navbar.astro'
+import Footer from '@/components/sections-layout/footer.astro'
+import DotPattern from '@/components/magicui/dot-pattern'
+
+import { cn } from '@/lib/utils'
+---
+
+<Layout title="Jesus Saavedra + Developer">
+  <div class="relative flex justify-center w-full h-[100vh] border dark bg-background">
+    <div class="w-[708px] flex flex-col items-center">
+      <Navbar />
+      <main>
+        <slot />
+        <Footer />
+      </main>
+      <DotPattern
+        width={24}
+        height={24}
+        className={cn('[mask-image:radial-gradient(_circle_at_center,white,transparent)]')}
+      />
+    </div>
+  </div>
+</Layout>
