@@ -16,13 +16,14 @@ import {
     Vuejs
 } from '../icons/icons-programming'
 
+
 type Technology = {
     title: string
     Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element
     order: number
 }
 
-export const technologies: Record<string, Technology> = {
+export const technologies = {
     TypeScript: {
         title: 'TypeScript',
         Icon: Typescript,
@@ -38,7 +39,7 @@ export const technologies: Record<string, Technology> = {
         Icon: React,
         order: 3
     },
-    Vue: {
+    Vuejs: {
         title: 'Vue.js',
         Icon: Vuejs,
         order: 4
@@ -98,5 +99,5 @@ export const technologies: Record<string, Technology> = {
         Icon: Postgres,
         order: 14
     },
-}
+} as const satisfies Record<string, Technology>
 

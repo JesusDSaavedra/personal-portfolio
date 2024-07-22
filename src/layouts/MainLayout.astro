@@ -10,17 +10,19 @@ import { cn } from '@/lib/utils'
 ---
 
 <Layout title="Jesus Saavedra + Developer">
-  <div class="relative flex justify-center w-full h-[100vh] border dark bg-background">
+  <div
+    class="min-h-screen relative flex justify-center w-full h-full border dark bg-background z-[200]"
+  >
     <div class="w-[708px] flex flex-col items-center">
       <Navbar />
-      <main>
+      <main class="w-[768px]">
         <slot />
         <Footer />
       </main>
       <DotPattern
         width={24}
         height={24}
-        className={cn('[mask-image:radial-gradient(_circle_at_center,white,transparent)]')}
+        className={cn('[mask-image:radial-gradient(_circle_at_center,white,transparent)] z-[-100]')}
       />
     </div>
   </div>

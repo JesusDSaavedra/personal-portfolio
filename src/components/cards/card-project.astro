@@ -1,41 +1,21 @@
 ---
+import ContributionIcon from '@/icons/contribution.icon.astro'
+import type { Project } from '../../content/projects'
+import { technologies } from '@/content/technologies'
 
+interface Props {
+  project: Project
+  isPageWork: boolean
+}
+
+const { project, isPageWork } = Astro.props
 ---
 
 <article
-  class="relative rounded-lg overflow-hidden flex gap-4 flex-col group border border-dashed hover:border-solid transition-[border] duration-500 hover:border-accent-3"
+  class="relative rounded-lg overflow-hidden flex gap-4 flex-col group border border-dashed hover:border-solid transition-[border] duration-500 hover:border-accent-3 bg-background border-white/20"
 >
   <div class="bg-noise relative">
-    <header
-      class="absolute w-full z-10 top-4 px-3 inset-x-0 mx-auto flex items-center justify-between"
-    >
-      <div
-        data-isnew="false"
-        class='invisible data-[isnew="true"]:visible px-2 py-1 w-fit text-xs rounded-md bg-[rgb(26,26,26)] text-accent-7'
-      >
-        <span class="mr-1 inline-block group-hover:animate-squeeze">✨</span>Nuevo
-      </div><a
-        class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 py-1 w-fit text-xs rounded-md bg-[rgb(26,26,26)] text-accent-7"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://chatgpt.com/g/g-2sAgdHc8E-gpt-tik-table"
-        >Abrir<span
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-move-up-right size-3"
-            ><path d="M13 5H19V11"></path><path d="M19 5L5 19"></path></svg
-          ></span
-        ></a
-      >
-    </header><img
+    <img
       alt="gpt-tik.table"
       loading="lazy"
       width="350"
@@ -44,120 +24,38 @@
       data-nimg="1"
       class="w-full object-cover bg-gray-100 aspect-video group-hover:grayscale-0 opacity-80 group-hover:scale-105 transition-all duration-300"
       style="color:transparent;mask-image:linear-gradient(to bottom, black, transparent)"
-      src="../../../public/img/project-1.jpeg"
-    /><footer
-      class="absolute px-3 z-50 inset-x-0 w-full bottom-0 flex justify-between items-center"
-    >
+      src=`../../../public/img/${project.image}`
+    />
+    <footer class="absolute pl-3 z-50 inset-x-0 w-full top-24 flex justify-between items-center">
       <div
         data-iscontributing="false"
         class='flex items-center gap-2 w-fit px-2 py-1 text-xs rounded-md bg-[rgb(26,26,26)] text-white/60 invisible data-[iscontributing="true"]:visible'
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-git-fork size-4"
-          ><circle cx="12" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle
-            cx="18"
-            cy="6"
-            r="3"></circle><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path><path
-            d="M12 12v3"></path></svg
-        >contributing
-      </div><div class="flex -space-x-2 contrast-125">
-        <div
-          class="aspect-square bg-accent-2 p-[3px] overflow-hidden rounded-full"
-          style="z-index:0"
-        >
-          <svg
-            viewBox="0 0 256 256"
-            width="1em"
-            height="1em"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid"
-            class="size-4.5 group-hover:animate-squeeze rounded-full"
-            ><path
-              d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0Z"
-              fill="#3178C6"></path><path
-              d="M150.518 200.475v27.62c4.492 2.302 9.805 4.028 15.938 5.179 6.133 1.151 12.597 1.726 19.393 1.726 6.622 0 12.914-.633 18.874-1.899 5.96-1.266 11.187-3.352 15.678-6.257 4.492-2.906 8.048-6.704 10.669-11.394 2.62-4.689 3.93-10.486 3.93-17.391 0-5.006-.749-9.394-2.246-13.163a30.748 30.748 0 0 0-6.479-10.055c-2.821-2.935-6.205-5.567-10.149-7.898-3.945-2.33-8.394-4.531-13.347-6.602-3.628-1.497-6.881-2.949-9.761-4.359-2.879-1.41-5.327-2.848-7.342-4.316-2.016-1.467-3.571-3.021-4.665-4.661-1.094-1.64-1.641-3.495-1.641-5.567 0-1.899.489-3.61 1.468-5.135s2.362-2.834 4.147-3.927c1.785-1.094 3.973-1.942 6.565-2.547 2.591-.604 5.471-.906 8.638-.906 2.304 0 4.737.173 7.299.518 2.563.345 5.14.877 7.732 1.597a53.669 53.669 0 0 1 7.558 2.719 41.7 41.7 0 0 1 6.781 3.797v-25.807c-4.204-1.611-8.797-2.805-13.778-3.582-4.981-.777-10.697-1.165-17.147-1.165-6.565 0-12.784.705-18.658 2.115-5.874 1.409-11.043 3.61-15.506 6.602-4.463 2.993-7.99 6.805-10.582 11.437-2.591 4.632-3.887 10.17-3.887 16.615 0 8.228 2.375 15.248 7.127 21.06 4.751 5.811 11.963 10.731 21.638 14.759a291.458 291.458 0 0 1 10.625 4.575c3.283 1.496 6.119 3.049 8.509 4.66 2.39 1.611 4.276 3.366 5.658 5.265 1.382 1.899 2.073 4.057 2.073 6.474a9.901 9.901 0 0 1-1.296 4.963c-.863 1.524-2.174 2.848-3.93 3.97-1.756 1.122-3.945 1.999-6.565 2.632-2.62.633-5.687.95-9.2.95-5.989 0-11.92-1.05-17.794-3.151-5.875-2.1-11.317-5.25-16.327-9.451Zm-46.036-68.733H140V109H41v22.742h35.345V233h28.137V131.742Z"
-              fill="#FFF"></path></svg
-          >
-        </div><div
-          class="aspect-square bg-accent-2 p-[3px] overflow-hidden rounded-full"
-          style="z-index:1"
-        >
-          <svg
-            viewBox="0 0 256 292"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="1em"
-            height="1em"
-            class="size-4.5 group-hover:animate-squeeze rounded-full"
-            ><defs
-              ><linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%"
-                ><stop offset="0%" stop-color="#41873F"></stop><stop
-                  offset="32.88%"
-                  stop-color="#418B3D"></stop><stop offset="63.52%" stop-color="#419637"
-                ></stop><stop offset="93.19%" stop-color="#3FA92D"></stop><stop
-                  offset="100%"
-                  stop-color="#3FAE2A"></stop></linearGradient
-              ><linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%"
-                ><stop offset="13.76%" stop-color="#41873F"></stop><stop
-                  offset="40.32%"
-                  stop-color="#54A044"></stop><stop offset="71.36%" stop-color="#66B848"
-                ></stop><stop offset="90.81%" stop-color="#6CC04A"></stop></linearGradient
-              ><linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%"
-                ><stop offset="9.192%" stop-color="#6CC04A"></stop><stop
-                  offset="28.64%"
-                  stop-color="#66B848"></stop><stop offset="59.68%" stop-color="#54A044"
-                ></stop><stop offset="86.24%" stop-color="#41873F"></stop></linearGradient
-              ><path
-                id="b"
-                d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
-              ></path><path
-                id="e"
-                d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
-              ></path></defs
-            ><path
-              fill="url(#a)"
-              d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"
-            ></path><mask id="d" fill="#fff"><use xlink:href="#b"></use></mask><path
-              fill="url(#c)"
-              d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z"
-              mask="url(#d)"></path><mask id="g" fill="#fff"><use xlink:href="#e"></use></mask><path
-              fill="url(#f)"
-              d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z"
-              mask="url(#g)"></path></svg
-          >
-        </div><div
-          class="aspect-square bg-accent-2 p-[3px] overflow-hidden rounded-full"
-          style="z-index:2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            preserveAspectRatio="xMidYMid"
-            viewBox="0 0 256 260"
-            class="size-4.5 group-hover:animate-squeeze rounded-full"
-            ><path
-              fill="#fff"
-              d="M239.184 106.203a64.716 64.716 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.716 64.716 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.665 64.665 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.767 64.767 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483Zm-97.56 136.338a48.397 48.397 0 0 1-31.105-11.255l1.535-.87 51.67-29.825a8.595 8.595 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601Zm-104.466-44.61a48.345 48.345 0 0 1-5.781-32.589l1.534.921 51.722 29.826a8.339 8.339 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803ZM23.549 85.38a48.499 48.499 0 0 1 25.58-21.333v61.39a8.288 8.288 0 0 0 4.195 7.316l62.874 36.272-21.845 12.636a.819.819 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405v.256Zm179.466 41.695-63.08-36.63L161.73 77.86a.819.819 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.544 8.544 0 0 0-4.4-7.213Zm21.742-32.69-1.535-.922-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.716.716 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391v.205ZM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87-51.67 29.825a8.595 8.595 0 0 0-4.246 7.367l-.051 72.697Zm11.868-25.58 28.138-16.217 28.188 16.218v32.434l-28.086 16.218-28.188-16.218-.052-32.434Z"
-            ></path></svg
-          >
-        </div>
+        <ContributionIcon />
+        contributing
+      </div>
+      <div class="flex -space-x-10 contrast-125">
+        {
+          project['stack-tech'].toSpliced(4, 4).map((technologie, index) => {
+            const currentTech = technologies[technologie]
+            const { Icon } = currentTech
+            return (
+              <span
+                class="aspect-square bg-accent-2 overflow-hidden rounded-full scale-[0.44] bg-[rgba(53,53,53,0.81)] p-2 border-2 border-white/40"
+                style={`z-index:${index}`}
+              >
+                <Icon />
+              </span>
+            )
+          })
+        }
       </div>
     </footer>
-  </div><div class="p-4 grid gap-4">
-    <h2 class="capitalize text-accent-7 group-hover:text-primary">PSD Bank</h2><p
-      class="text-sm leading-6 text-left text-white/60"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  </div>
+  <div class="p-4 grid gap-4">
+    <h2 class="capitalize text-accent-7 group-hover:text-primary">{project['title-en']}</h2>
+    <p class="text-sm leading-6 text-left text-white/60">
+      {project['description-en']}
     </p>
   </div>
 </article>

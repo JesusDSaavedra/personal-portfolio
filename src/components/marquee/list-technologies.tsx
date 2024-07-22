@@ -31,7 +31,7 @@ const CardTech: React.FC<props> = ({  title, Icon, className }) => {
 export function ListTechnologies() {
   return (
     <div 
-      className="flex flex-col items-center justify-center overflow-hidden rounded-lg [mask-image:radial-gradient(_circle_at_center,white,transparent)]" 
+      className="flex flex-col items-center justify-center overflow-hidden rounded-lg [mask-image:radial-gradient(_circle_at_center,white,transparent)] " 
       id='list-technologies'
     >
       <Marquee className="[--duration:40s]">

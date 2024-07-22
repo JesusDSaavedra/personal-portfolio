@@ -1,15 +1,17 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro'
 import CardProject from '@/components/cards/card-project.astro'
+import CardContactMe from '@/components/cards/card-contact-me.astro'
 
 import { cn } from '@/lib/utils'
 import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
 import { ListTechnologies } from './../components/marquee/list-technologies'
 import RowLink from '@/icons/row-link.icon.astro'
+import { projects } from '@/content/projects'
 ---
 
 <MainLayout>
-  <div class="mt-10">
+  <div class="mt-10 mb-20">
     <div class="flex flex-col">
       <div class="flex items-center">
         <img
@@ -20,7 +22,7 @@ import RowLink from '@/icons/row-link.icon.astro'
           <span class="font-bold text-2xl italic tracking-wider">Jesus David Saavedra</span>
           <div
             class={cn(
-              'max-w-max mt-2 group rounded-full border border-black/5 text-white transition-all ease-in hover:cursor-pointer dark:border-[#8577a8] dark:hover:border-[#c38de7]'
+              'max-w-max mt-2 group rounded-full border border-black/5 text-white transition-all ease-in hover:cursor-pointer dark:border-[#8577a8] dark:hover:border-[#c38de7] bg-background'
             )}
           >
             <AnimatedShinyText
@@ -42,16 +44,17 @@ import RowLink from '@/icons/row-link.icon.astro'
         impact on projects, delivering high-quality results.</span
       >
     </div>
-    <div class="w-[708px]">
+    <div>
       <ListTechnologies />
     </div>
     <div>
       <span class="text-2xl font-bold tracking-widern italic"> Proyects </span>
-      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-        <CardProject />
-        <CardProject />
-        <CardProject />
+      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        {projects.map((project) => <CardProject project={project} isPageWork={false} />)}
       </div>
+    </div>
+    <div>
+      <CardContactMe />
     </div>
   </div>
 </MainLayout>
