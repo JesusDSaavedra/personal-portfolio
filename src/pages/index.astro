@@ -8,15 +8,21 @@ import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
 import { ListTechnologies } from './../components/marquee/list-technologies'
 import RowLink from '@/icons/row-link.icon.astro'
 import { projects } from '@/content/projects'
+import { Image } from 'astro:assets'
 ---
 
 <MainLayout>
-  <div class="mt-10 mb-20">
+  <div>
     <div class="flex flex-col">
       <div class="flex items-center">
-        <img
-          src="/public//img/profile.jpg"
+        <Image
+          transition:name=`image profile.jpg`
+          loading="eager"
+          alt="me"
+          src="/img/profile.jpg"
           class="rounded-full object-cover w-[128px] h-[128px] z-10"
+          width={128}
+          height={128}
         />
         <div class="ml-6 flex flex-col justify-center">
           <span class="font-bold text-2xl italic tracking-wider">Jesus David Saavedra</span>
