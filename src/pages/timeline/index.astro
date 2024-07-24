@@ -1,9 +1,18 @@
 ---
+import Timeline from '@/components/timeline.astro'
 import MainLayout from '@/layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <div>Linea de tiempo</div>
+  <div class="flex flex-col items-center justify-center">
+    <header class="w-[420px] mb-10 text-center">
+      <h3 class="font-bold text-3xl italic tracking-wider mb-4">Timeline</h3>
+      <span> The linear view of some milestones and notable moments that happened so far. </span>
+    </header>
+    <div class="flex justify-center">
+      <Timeline />
+    </div>
+  </div>
 </MainLayout>
 
 <style></style>

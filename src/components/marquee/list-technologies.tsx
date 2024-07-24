@@ -9,7 +9,7 @@ type props = {
 }
 
 
-const CardTech: React.FC<props> = ({  title, Icon, className }) => {
+export const CardTech: React.FC<props> = ({  title, Icon, className }) => {
   return (
     <figure
       className={cn(
