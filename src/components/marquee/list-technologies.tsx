@@ -5,19 +5,15 @@ import Marquee from "@/components/magicui/marquee";
 type props = {
   title: string
   Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element
-  className?: string
+  padding?: number
 }
 
 
-export const CardTech: React.FC<props> = ({  title, Icon, className }) => {
+export const CardTech: React.FC<props> = ({  title, Icon, padding = 4 }) => {
   return (
     <figure
       className={cn(
-        "rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-[21232E]",
-        // dark styles
-        " dark:bg-[21232E]",
+        `p-${padding}`
       )}
     >
       <div className="flex flex-col items-center gap-2">

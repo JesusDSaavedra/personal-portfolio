@@ -2,6 +2,7 @@
 import ContributionIcon from '@/icons/contribution.icon.astro'
 import type { Project } from '../../content/projects'
 import { technologies } from '@/content/technologies'
+import { Image } from 'astro:assets'
 
 interface Props {
   project: Project
@@ -14,48 +15,59 @@ const { project, isPageWork } = Astro.props
 <article
   class="relative rounded-lg overflow-hidden flex gap-4 flex-col group border border-dashed hover:border-solid transition-[border] duration-500 hover:border-accent-3 bg-background border-white/20"
 >
-  <div class="bg-noise relative">
-    <img
-      alt="gpt-tik.table"
-      loading="lazy"
-      width="350"
-      height="350"
-      decoding="async"
-      data-nimg="1"
-      class="w-full object-cover bg-gray-100 aspect-video group-hover:grayscale-0 opacity-80 group-hover:scale-105 transition-all duration-300"
-      style="color:transparent;mask-image:linear-gradient(to bottom, black, transparent)"
-      src=`../../../public/img/${project.image}`
-    />
-    <footer class="absolute pl-3 z-50 inset-x-0 w-full top-24 flex justify-between items-center">
-      <div
-        data-iscontributing="false"
-        class='flex items-center gap-2 w-fit px-2 py-1 text-xs rounded-md bg-[rgb(26,26,26)] text-white/60 invisible data-[iscontributing="true"]:visible'
+  <a href={`work/${project.id}`}>
+    <div class="bg-noise relative">
+      <header
+        class="absolute w-full z-10 top-4 px-3 inset-x-0 mx-auto flex items-center justify-end"
       >
-        <ContributionIcon />
-        contributing
-      </div>
-      <div class="flex -space-x-10 contrast-125">
-        {
-          project['stack-tech'].toSpliced(4, 4).map((technologie, index) => {
-            const currentTech = technologies[technologie]
-            const { Icon } = currentTech
-            return (
-              <span
-                class="aspect-square bg-accent-2 overflow-hidden rounded-full scale-[0.44] bg-[rgba(53,53,53,0.81)] p-2 border-2 border-white/40"
-                style={`z-index:${index}`}
-              >
-                <Icon />
-              </span>
-            )
-          })
-        }
-      </div>
-    </footer>
-  </div>
-  <div class="p-4 grid gap-4">
-    <h2 class="capitalize text-accent-7 group-hover:text-primary">{project['title-en']}</h2>
-    <p class="text-sm leading-6 text-left text-white/60">
-      {project['description-en']}
-    </p>
-  </div>
+        <div
+          class="px-2 py-1 w-fit text-xs rounded-md bg-[rgb(26,26,26)] text-accent-7"
+          transition:name={`company-name-${project?.id}`}
+        >
+          {project['company-name']}
+        </div>
+      </header>
+      <Image
+        transition:name={project.image}
+        alt=`${project.image}`
+        width={350}
+        height={350}
+        class="w-full object-cover bg-gray-100 aspect-video group-hover:grayscale-0 opacity-80 group-hover:scale-105 transition-all duration-300"
+        style="color:transparent;mask-image:linear-gradient(to bottom, black, transparent)"
+        src={`/img/${project.image}`}
+      />
+      <footer class="absolute pl-3 z-50 inset-x-0 w-full top-24 flex justify-end items-center">
+        <div class="flex -space-x-10 contrast-125">
+          {
+            project['stack-tech'].map((technologie, index) => {
+              const currentTech = technologies[technologie]
+              const { Icon } = currentTech
+              return (
+                <span
+                  class="aspect-square bg-accent-2 overflow-hidden rounded-full scale-[0.44] bg-[rgba(53,53,53,0.81)] p-2 border-2 border-white/40"
+                  style={`z-index:${index}`}
+                >
+                  <Icon />
+                </span>
+              )
+            })
+          }
+        </div>
+      </footer>
+    </div>
+    <div class="p-4 grid gap-4">
+      <h2
+        class="capitalize text-accent-7 group-hover:text-primary"
+        transition:name={`title-${project?.id}`}
+      >
+        {project['title-en']}
+      </h2>
+      <p
+        class="text-sm leading-6 text-left text-white/60"
+        transition:name={`description-${project?.id}`}
+      >
+        {project?.['description-en']}
+      </p>
+    </div>
+  </a>
 </article>

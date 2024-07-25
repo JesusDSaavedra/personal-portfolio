@@ -16,7 +16,7 @@ import { Image } from 'astro:assets'
     <div class="flex flex-col">
       <div class="flex items-center">
         <Image
-          transition:name=`image profile.jpg`
+          transition:name=`image profile.jpeg`
           loading="eager"
           alt="me"
           src="/img/profile.jpg"
@@ -53,10 +53,14 @@ import { Image } from 'astro:assets'
     <div>
       <ListTechnologies />
     </div>
-    <div>
+    <div class="mt-4">
       <span class="text-2xl font-bold tracking-widern italic"> Proyects </span>
       <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
-        {projects.map((project) => <CardProject project={project} isPageWork={false} />)}
+        {
+          projects
+            .toSpliced(3, 3)
+            .map((project) => <CardProject project={project} isPageWork={false} />)
+        }
       </div>
     </div>
     <div>

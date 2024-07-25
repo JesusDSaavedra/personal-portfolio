@@ -1,9 +1,28 @@
 ---
+import CardProject from '@/components/cards/card-project.astro'
+import { projects } from '@/content/projects'
 import MainLayout from '@/layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <div>Trabajos</div>
+  <div class="flex flex-col items-center justify-center">
+    <header class="w-[420px] mb-10 text-center">
+      <h3 class="font-bold text-3xl italic tracking-wider mb-4">Works</h3>
+      <span>
+        It has been an absolute pleasure to put my heart and soul into these projects. While you're
+        here, browse these projects.
+      </span>
+    </header>
+    <div class="flex justify-center">
+      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        {
+          projects
+            .sort((a, b) => parseInt(a.id) - parseInt(b.id))
+            .map((project) => <CardProject project={project} isPageWork={true} />)
+        }
+      </div>
+    </div>
+  </div>
 </MainLayout>
 
 <style></style>

@@ -1,5 +1,5 @@
 
-export interface Event {
+export interface Timeline {
     id: string | number
     title: string
     location: string
@@ -7,16 +7,12 @@ export interface Event {
     description: string
     image?: string
     type: 'work' | 'education'
+    'id-work'?: string
 }
 
-export interface Timeline {
-    id: string | number
-    title: string
-    logo: string
-    event: Event[]
-}
 
-export const timelines: Event[] = [
+
+export const timelines: Timeline[] = [
     {
         id: 0,
         title: 'Start in programming',
@@ -61,5 +57,15 @@ export const timelines: Event[] = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus',
         image: 'project-3.webp',
         type: "education"
+    },
+    {
+        id: 4,
+        title: 'First Job',
+        location: 'Colombia',
+        date: 'Jun 2022',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus',
+        image: 'project-1.jpeg',
+        type: "work",
+        'id-work': '1'
     },
 ]
