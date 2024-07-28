@@ -11,5 +11,12 @@ export default defineConfig({
     }),
     react()
   ],
-  output: 'server'
+  output: 'server',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 })

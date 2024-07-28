@@ -8,13 +8,52 @@ import SpanishIcon from '@/icons/spanish.icon.astro'
 import EnglishIcon from '@/icons/english.icon.astro'
 import DarkTheme from '@/icons/dark-theme.icon.astro'
 import LightTheme from '@/icons/light-theme.icon.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { currentlyLearning } from '@/content/tech-stack'
+
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const defaultPage = getRelativeLocaleUrl(lang, '')
+const aboutURL = getRelativeLocaleUrl(lang, 'about')
+const workURL = getRelativeLocaleUrl(lang, 'work')
+const techStackURL = getRelativeLocaleUrl(lang, 'stack/grid')
+const timelineURL = getRelativeLocaleUrl(lang, 'timeline')
+
+const pathname = Astro.url.pathname
+const lastChar = pathname.at(-1)
+const cleanPathname = pathname.substring(
+  1,
+  lastChar === '/' ? pathname.length - 1 : pathname.length
+)
+const splitPathname = cleanPathname.split('/')
+const auxRedirect =
+  splitPathname.length > 1 && lang !== 'en'
+    ? splitPathname.toSpliced(0, 1).join('/')
+    : splitPathname.join('/')
+const redirect = auxRedirect === 'es' || auxRedirect === '/' ? '' : auxRedirect
+
+const i18n = {
+  es: {
+    about: 'sobre mí',
+    work: 'trabajo',
+    techStack: 'tecnologías',
+    timeline: 'cronología'
+  },
+  en: {
+    about: 'about',
+    work: 'work',
+    techStack: 'tech stack',
+    timeline: 'timeline'
+  }
+}
+
+console.log(Astro.currentLocale)
 ---
 
 <nav class="w-[800px] my-5">
   <div
     class="flex justify-around gap-10 px-6 py-4 rounded-full items-center bg-[#252f3cd9] backdrop-blur-3xl"
   >
-    <a href="/">
+    <a href={defaultPage}>
       <AnimatedGradientText>
         <span
           class={cn(
@@ -26,10 +65,10 @@ import LightTheme from '@/icons/light-theme.icon.astro'
       </AnimatedGradientText>
     </a>
     <div class="flex justify-around gap-6 text-base">
-      <a href="/about" class="">About</a>
-      <a href="/work" class="">Work</a>
-      <a href="/stack" class="">Tech stack</a>
-      <a href="/timeline" class="">Timeline</a>
+      <a href={aboutURL} class="">{i18n[lang].about}</a>
+      <a href={workURL} class="">{i18n[lang].work}</a>
+      <a href={techStackURL} class="">{i18n[lang].techStack}</a>
+      <a href={timelineURL} class="">{i18n[lang].timeline}</a>
     </div>
     <div class="flex justify-around gap-5">
       <a href="https://github.com/JesusDSaavedra" target="_blank" class="">
@@ -40,8 +79,8 @@ import LightTheme from '@/icons/light-theme.icon.astro'
       </a>
       <hr class="h-4 w-[1px] shrink-0 bg-gray-400" />
 
-      <a href="https://github.com/JesusDSaavedra" target="_blank" class="">
-        <EnglishIcon />
+      <a href={`${lang === 'es' ? `/${redirect}` : `/es/${redirect}`}`}>
+        {lang === 'es' ? <SpanishIcon /> : <EnglishIcon />}
       </a>
       <a href="https://www.linkedin.com/in/jesusdsaavedra88/" target="_blank" class="">
         <LightTheme />

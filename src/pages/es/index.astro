@@ -1,0 +1,72 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro'
+import CardProject from '@/components/cards/card-project.astro'
+import CardContactMe from '@/components/cards/card-contact-me.astro'
+
+import { cn } from '@/lib/utils'
+import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
+import { ListTechnologies } from '@/components/marquee/list-technologies'
+import RowLink from '@/icons/row-link.icon.astro'
+import { projects } from '@/content/projects'
+import { Image } from 'astro:assets'
+---
+
+<MainLayout>
+  <div>
+    <div class="flex flex-col">
+      <div class="flex items-center">
+        <Image
+          transition:name=`image profile.jpeg`
+          loading="eager"
+          alt="me"
+          src="/img/profile.jpg"
+          class="rounded-full object-cover w-[128px] h-[128px] z-10"
+          width={128}
+          height={128}
+        />
+        <div class="ml-6 flex flex-col justify-center">
+          <span class="font-bold text-2xl italic tracking-wider">Jesus David Saavedra</span>
+          <div
+            class={cn(
+              'max-w-max mt-2 group rounded-full border border-black/5 text-white transition-all ease-in hover:cursor-pointer dark:border-[#8577a8] dark:hover:border-[#c38de7] bg-background'
+            )}
+          >
+            <AnimatedShinyText
+              className="inline-flex items-center justify-center px-4 py-1 transition -out hover:text-[#51415c] hover:duration-300 hover:dark:text-[#c38de7]"
+            >
+              <span class="flex flex-row items-center justify-center">
+                Disponible para trabajar
+                <span class="scale-[0.65]">
+                  <RowLink />
+                </span>
+              </span>
+            </AnimatedShinyText>
+          </div>
+        </div>
+      </div>
+      <span class="my-8 bg-[#15191d] text-lg">
+        I'm a Full Stack Developer with over 2 years of experience. I am committed to continuous
+        professional growth and adapting to a constantly evolving environment to make a significant
+        impact on projects, delivering high-quality results. Español</span
+      >
+    </div>
+    <div>
+      <ListTechnologies />
+    </div>
+    <div class="mt-4">
+      <span class="text-2xl font-bold tracking-widern italic"> Proyects </span>
+      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        {
+          projects
+            .toSpliced(3, 3)
+            .map((project) => <CardProject project={project} isPageWork={false} />)
+        }
+      </div>
+    </div>
+    <div>
+      <CardContactMe />
+    </div>
+  </div>
+</MainLayout>
+
+<style></style>

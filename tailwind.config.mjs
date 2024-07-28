@@ -21,7 +21,8 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'text-gradient':
-          'linear-gradient(90.42deg, #4ab1f1 0.58%,#566cec 37.22%,#d749af 73.87%, #ff7c51 112.26%)'
+          'linear-gradient(90.42deg, #4ab1f1 0.58%,#566cec 37.22%,#d749af 73.87%, #ff7c51 112.26%)',
+        'sunset-gradient': 'linear-gradient(90deg,#F7BE2B 0%,#F537F9 100%)'
       },
       colors: {
         border: 'hsl(var(--border))',

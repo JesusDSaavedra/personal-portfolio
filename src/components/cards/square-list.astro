@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets'
+import type { TechnologyAndFramework } from '../../content/tech-stack'
+
+interface Props {
+  tech: TechnologyAndFramework
+}
+
+const { tech } = Astro.props
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const { logo, url, name, [`description-${lang}` as 'description-en' | 'description-es']: description } = tech
+---
+
+{
+  url ? (
+    <a 
+      class="relative p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
+        hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all 
+        before:hover:duration-300 before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
+      href={url} 
+      transition:name=`tech ${name} box` 
+    >
+      <div class="flex flex-row items-center">
+        <Image 
+          loading="eager" 
+          src={`/img${logo}`}
+          alt={name} 
+          width="96" 
+          height="96" 
+          class="rounded-lg size-[96px] object-contain min-w-[96px]" 
+        />
+        <div class="flex flex-col ml-4">
+          <h5 class="relative text-base font-bold tracking-[-0.4px] items-center flex my-1">{name}</h5>
+          <p class="text-[15px] opacity-60 tracking-[-0.2px] font-normal leading-[140%]">{description}</p>
+        </div>
+      </div>
+    </a>
+  ) : (
+    <div 
+      class="relative p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
+        hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all 
+        before:hover:duration-300 before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
+      transition:name=`tech ${name} box` 
+    >
+      <div class="flex flex-row items-center">
+        <Image 
+          loading="eager" 
+          src={`/img${logo}`}
+          alt={name} 
+          width="96" 
+          height="96" 
+          class="rounded-lg size-[96px] object-contain" 
+        />
+        <div class="flex flex-col ml-4">
+          <h5 class="relative text-base font-bold tracking-[-0.4px] items-center flex my-1">{name}</h5>
+          <p class="text-[15px] opacity-60 tracking-[-0.2px] font-normal leading-[140%]">{description}</p>
+        </div>
+      </div>
+    </div>
+  )
+}

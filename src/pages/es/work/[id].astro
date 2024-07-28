@@ -1,0 +1,152 @@
+---
+import { Image } from 'astro:assets'
+import MainLayout from '@/layouts/MainLayout.astro'
+import { CardTech, ListTechnologies } from '@/components/marquee/list-technologies'
+import Timeline from '@/components/timeline.astro'
+import { projects } from '@/content/projects'
+import { technologies } from '@/content/technologies'
+import { BorderBeam } from '@/components/magicui/border-beam'
+
+const { id } = Astro.params
+
+const project = projects.find((project) => project.id === id)
+const filteredTechnologies = project?.['stack-tech'].map((techName) => {
+  return technologies[techName]
+})
+---
+
+<MainLayout>
+  <div>
+    <div class="flex gap-7 justify-center">
+      <div class="flex flex-col items-center max-w-[650px]">
+        <header class="flex flex-col gap-4 w-[650px]">
+          <div class="flex gap-4 items-center justify-center">
+            {
+              project?.logo && (
+                <Image
+                  src={`/img/${project?.logo}`}
+                  alt="logo"
+                  width={30}
+                  height={30}
+                  class="w-[60px] h-[60px] rounded-md"
+                />
+              )
+            }
+            <div class="flex flex-col items-center">
+              <h4 class="text-2xl font-medium" transition:name={`company-name-${project?.id}`}>
+                {project?.['company-name']}
+              </h4>
+              <h3 class="text-xl font-medium" transition:name={`title-${project?.id}`}>
+                {project?.['title-en']}
+              </h3>
+            </div>
+          </div>
+          <span class="text-center" transition:name={`description-${project?.id}`}>
+            {project?.['description-en']}
+          </span>
+          <span class="text-center font-semibold text-lg text-white/70 mt-10">
+            Stack of technologies used Español
+          </span>
+          <div class="flex justify-center gap-4">
+            {
+              filteredTechnologies?.map((technologie) => (
+                <div class="flex justify-center items-center rounded-3xl w-24 h-24 shadow-2xl bg-slate-800/40">
+                  <CardTech Icon={technologie.Icon} title={technologie.title} padding={0} />
+                </div>
+              ))
+            }
+          </div>
+        </header>
+        <div class="grid relative py-6 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-2 items-center">
+          <div class="relative rounded-xl">
+            <Image
+              transition:name={project?.image}
+              src={`/img/${project?.image}`}
+              alt="img1"
+              width={300}
+              height={300}
+              class="w-[350px] h-[350px] rounded-xl object-cover"
+            />
+            <BorderBeam size={250} duration={12} delay={9} borderWidth={2} />
+          </div>
+          <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+            {project?.['firstParagraph-en']}
+          </p>
+        </div>
+        <div class="flex flex-col gap-6">
+          {
+            project?.[`secondParagraph-en`] && (
+              <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+                {project?.[`secondParagraph-en`]}
+              </p>
+            )
+          }
+          {
+            project?.images && project.images[0] && (
+              <Image
+                loading="eager"
+                width="150"
+                height="150"
+                src={`/img/${project?.images[0]}`}
+                alt={'project 1'}
+                class="w-full rounded-xl mt-5"
+              />
+            )
+          }
+          {
+            project?.[`thirdParagraph-en`] && (
+              <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+                {project?.[`thirdParagraph-en`]}
+              </p>
+            )
+          }
+          {
+            project?.images && project.images[1] && (
+              <Image
+                loading="lazy"
+                width="150"
+                height="150"
+                src={`/img/${project?.images[1]}`}
+                alt={'project 2'}
+                class="w-full rounded-xl mt-5"
+              />
+            )
+          }
+          {
+            project?.[`fourthParagraph-en`] && (
+              <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+                {project?.[`fourthParagraph-en`]}
+              </p>
+            )
+          }
+          {
+            project?.images && project.images[2] && (
+              <Image
+                loading="lazy"
+                width="150"
+                height="150"
+                src={`/img/${project?.images[2]}`}
+                alt={'project 3'}
+                class="w-full rounded-xl mt-5"
+              />
+            )
+          }
+        </div>
+        {
+          project?.timeline && (
+            <div class="my-10">
+              <div class="flex flex-col items-center">
+                <Timeline
+                  timelines={project?.timeline}
+                  width={600}
+                  widthImg={650}
+                  heidthImg={350}
+                />
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</MainLayout>

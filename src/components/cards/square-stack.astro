@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+import type { TechnologyAndFramework } from '../../content/tech-stack'
+
+interface Props {
+  tech: TechnologyAndFramework
+}
+
+const { tech } = Astro.props
+const { logo, url, name } = tech
+---
+
+{
+  url ? (
+    <a
+      class="relative cursor-pointer p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
+      hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 
+      before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
+      href={url}
+      target="_blank"
+      transition:name=`tech ${name} box`
+    >
+      <Image
+        loading="eager"
+        src={`/img${logo}`}
+        alt={name}
+        width="60"
+        height="60"
+        class="rounded-lg size-[60px] object-contain"
+      />
+    </a>
+  ) : (
+    <div
+      class="relative cursor-pointer p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
+      hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 
+      before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
+      transition:name=`tech ${name} box`
+    >
+      <Image
+        loading="eager"
+        src={`/img${logo}`}
+        alt={name}
+        width="60"
+        height="60"
+        class="rounded-lg size-[60px] object-contain"
+      />
+    </div>
+  )
+}
