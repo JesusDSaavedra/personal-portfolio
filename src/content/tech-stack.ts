@@ -170,30 +170,30 @@ export const tools: TechnologyAndFramework[] = [
   {
     name: 'Youtube music',
     logo: '/yt-music.webp',
-    url: 'https://music.apple.com/',
-    'description-en': '50 million songs. All ad-free',
+    url: 'https://music.youtube.com/',
+    'description-en': 'It is a streaming music service that offers access to millions of songs and exclusive content.',
     'description-es': 'Es un servicio de streaming de música que ofrece acceso a millones de canciones y contenido exclusivo.'
   },
   {
     name: 'Discord',
     logo: '/discord.webp',
     url: 'https://discord.com/',
-    'description-en': 'Your place to talk',
+    'description-en': 'It is a communication platform for online communities, popular among gamers and diverse social groups.',
     'description-es': 'Es una plataforma de comunicación para comunidades en línea, popular entre gamers y grupos sociales diversos.'
   },
   {
     name: 'Obsidian',
     logo: '/obsidian.webp',
     url: 'https://obsidian.md/',
-    'description-en': 'A second brain, for you, forever',
+    'description-en': 'It is a Markdown-based notes and knowledge software designed for advanced personal organisation and productivity.',
     'description-es': 'Es un software de notas y conocimiento basado en Markdown, diseñado para organización y productividad personal avanzada.'
   },
   {
     name: 'Slack',
     logo: '/slack.webp',
-    url: 'https://www.microsoft.com/en-us/microsoft-teams/group-chat-software',
-    'description-en': 'Chat, meet, call and collaborate',
-    'description-es': 'Es una plataforma integral de colaboración empresarial de Microsoft, ideal para trabajo remoto y comunicación eficiente.'
+    url: 'https://slack.com/',
+    'description-en': 'Business communication and collaboration platform that functions as a unified digital workspace.',
+    'description-es': 'Plataforma de comunicación y colaboración empresarial que funciona como un espacio de trabajo digital unificado.'
   }
 ]
 
@@ -201,8 +201,8 @@ export const devices: TechnologyAndFramework[] = [
   {
     name: 'MacBook Air M2',
     logo: '/macbook.webp',
-    'description-en': 'The ultimate pro notebook, MacBook Pro. The ultimate pro notebook, MacBook Pro. ',
-    'description-es': 'Es una laptop potente con el chip M1 Pro de Apple, ideal para profesionales creativos.'
+    'description-en': 'Apple laptop, the latest and most powerful version of the popular MacBook Air.',
+    'description-es': 'Es una laptop potente con el chip M2 de Apple, ideal para profesionales creativos.'
   },
   {
     name: 'Magic Keyboard',
@@ -213,19 +213,19 @@ export const devices: TechnologyAndFramework[] = [
   {
     name: 'Magic Mouse',
     logo: '/mouse.webp',
-    'description-en': 'Magic Mouse',
+    'description-en': 'It is a wireless mouse with multi-touch technology and ergonomic design for Mac.',
     'description-es': 'Es un ratón inalámbrico con tecnología multitouch y diseño ergonómico para Mac.'
   },
   {
     name: 'Screen Samsumg S6',
     logo: '/screen.webp',
-    'description-en': 'Screen Samsumg S6',
+    'description-en': 'It is a monitor with high resolution and accurate colours for professional use.',
     'description-es': 'Es un monitor con alta resolución y colores precisos para uso profesional.'
   },
   {
     name: 'Sony WH-CH520',
     logo: '/headphone.webp',
-    'description-en': 'Sony WH-1000XM4',
-    'description-es': 'Son auriculares inalámbricos con cancelación de ruido y calidad de sonido excepcional para usuarios exigentes.'
+    'description-en': 'Wireless headphones and exceptional sound quality.',
+    'description-es': 'Son auriculares inalámbricos y calidad de sonido excepcional.'
   }
 ]

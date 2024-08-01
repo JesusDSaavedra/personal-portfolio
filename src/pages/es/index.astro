@@ -5,7 +5,7 @@ import CardContactMe from '@/components/cards/card-contact-me.astro'
 
 import { cn } from '@/lib/utils'
 import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
-import { ListTechnologies } from '@/components/marquee/list-technologies'
+import ListTechnologies from '@/components/marquee/list-tecnologies.astro'
 import RowLink from '@/icons/row-link.icon.astro'
 import { projects } from '@/content/projects'
 import { Image } from 'astro:assets'
@@ -44,17 +44,19 @@ import { Image } from 'astro:assets'
           </div>
         </div>
       </div>
-      <span class="my-8 bg-[#15191d] text-lg">
-        I'm a Full Stack Developer with over 2 years of experience. I am committed to continuous
-        professional growth and adapting to a constantly evolving environment to make a significant
-        impact on projects, delivering high-quality results. Español</span
-      >
+      <span class="my-8 text-lg">
+        Soy desarrollador Fullstack, autodidacta, creativo y organizado, capaz de construir cosas
+        increibles atraves del software y la programación. Me gusta mucho el aprendizaje continuo y
+        los desafíos que me llevan a aprender cada día más, también tengo excelentes habilidades de
+        diseño y la capacidad de convertir los requisitos en aplicaciones escalables eficientes y
+        dinámicas.
+      </span>
     </div>
     <div>
       <ListTechnologies />
     </div>
     <div class="mt-4">
-      <span class="text-2xl font-bold tracking-widern italic"> Proyects </span>
+      <span class="text-2xl font-bold tracking-widern italic"> Proyectos </span>
       <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
         {
           projects
@@ -64,7 +66,7 @@ import { Image } from 'astro:assets'
       </div>
     </div>
     <div>
-      <CardContactMe />
+      <CardContactMe title="Contáctame!" />
     </div>
   </div>
 </MainLayout>

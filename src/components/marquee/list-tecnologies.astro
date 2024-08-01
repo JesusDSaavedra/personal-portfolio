@@ -1,0 +1,21 @@
+---
+import { technologies } from '@/content/technologies'
+import Marquee from '../magicui/marquee'
+import CardTech from './card-tech.astro'
+---
+
+<div
+  class="flex flex-col items-center justify-center overflow-hidden rounded-lg [mask-image:radial-gradient(_circle_at_center,white,transparent)]"
+  id="list-technologies"
+>
+  <Marquee class="[--duration:40s]">
+    {
+      Object.values(technologies)
+        .sort((a, b) => a.order - b.order)
+        .map((item, index) => {
+          const { title, Icon } = item
+          return <CardTech key={index} title={title.toUpperCase()} Icon={Icon} />
+        })
+    }
+  </Marquee>
+</div>

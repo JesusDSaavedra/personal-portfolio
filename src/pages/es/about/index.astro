@@ -9,7 +9,7 @@ import { Contact } from 'lucide-react'
 <MainLayout>
   <div class="px-24">
     <header class="flex flex-col items-center gap-8">
-      <h2 class="font-bold text-3xl italic tracking-wider">About me!</h2>
+      <h2 class="font-bold text-3xl italic tracking-wider">¡Sobre mí!</h2>
       <div class="relative flex w-full justify-center rounded-2xl bg-background py-5 border">
         <Image
           transition:name=`image profile.jpeg`
@@ -24,36 +24,50 @@ import { Contact } from 'lucide-react'
       </div>
     </header>
     <div class="flex flex-col gap-5 mt-14">
-      <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Current</p>
+      <div class="flex flex-col gap-3">
         <span>
-          Español ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ipsum vitae recusandae rem fuga. Incidunt, est quibusdam id fuga modi
-          possimus exercitationem earum fugiat magnam repellat reprehenderit neque quos rem nulla!
+          ¡Hola! me llamo Jesus David Saavedra Latorre tengo 22 años, soy Desarrollador de Software
+          Fullstack con 2 años de experencia en el mundo Tech, me apasiona poder crear cosas
+          increibles atraves de lineas de codigo y transformar ideas en software.
+        </span>
+        <span>
+          Me gusta estar en constante aprendizaje, tener desafíos que me permitan crecer
+          profesionalmente. Disfruto trabajar en equipo o de manera individual, aplicando buenas
+          prácticas, escalabilidad, documentacion, legibilidad en el codigo entre otras, de esta
+          manera garantizar la calidad de los proyectos.
+        </span>
+        <span>
+          Comencé mi trayectoria enfocándome en el desarrollo frontend, pero me gusta entender el
+          funcionamiento de las cosas y como se complemetan. Por eso, decidí ampliar mis
+          conocimientos a backend y bases de datos.
         </span>
       </div>
       <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Like it</p>
         <span>
-          Español ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium! Lorem ipsum dolor sit amet
+          <span class="font-bold text-white/85 mb-3">Actualmente</span> me encuentro afianzando mis conociemineto
+          en backend en proyectos personales, aprendiendo GraphQL y algunas cosas de bases de datos.
+          Tambien me gustaria poner mis conocimientos de backend a prueba en un entorno laboral.
         </span>
       </div>
       <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Objectives</p>
         <span>
-          Español ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium!
+          <span class="font-bold text-white/85 mb-3">Fuera del codigo</span> soy una persona que le gusta
+          el deporte, jugar futbol, manejar moto, mantenerme en un buen estado fisico y mental, me gusta
+          vivir experiencias y conocer lugares. Esto me ayuda a mantener una mente clara y enfocada en
+          mis proyectos profecionales y personales.
         </span>
+      </div>
+      <div>
+        <span class="font-bold text-white/85 mb-3">Como objetivos</span> a corto plazo, quiero profundizar
+        mis conocimientos en GraphQL y explorar las posibilidades de las arquitecturas de microservicios.
+        A mediano plazo, mi objetivo es liderar un equipo de desarrollo y contribuir a la creación de
+        productos escalables y de alta calidad. También estoy interesado en compartir mis conocimientos
+        con otros desarrolladores a través de mentoring o dando charlas en meetups.
       </div>
     </div>
-    <div>
-      <CardContactMe />
-    </div>
+  </div>
+  <div>
+    <CardContactMe title="¡Contáctame!" />
   </div>
 </MainLayout>
 
