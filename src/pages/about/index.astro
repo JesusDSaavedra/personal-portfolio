@@ -24,35 +24,55 @@ import { Contact } from 'lucide-react'
       </div>
     </header>
     <div class="flex flex-col gap-5 mt-14">
-      <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Current</p>
+      <div class="flex flex-col gap-3 text-zinc-400">
         <span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ipsum vitae recusandae rem fuga. Incidunt, est quibusdam id fuga modi
-          possimus exercitationem earum fugiat magnam repellat reprehenderit neque quos rem nulla!
+          As a Frontend developer passionate about creating intuitive digital experiences, I have
+          spent the last 2 years building robust web applications. My experience ranges from
+          designing engaging user interfaces to scalable frontend development using technologies
+          such as React, Vue3, Tailwind, Sass among others.
+        </span>
+        <span>
+          <span class="font-bold text-white/65 mb-3">Currently</span>, I am exploring the world of
+          backend and microservices architectures to optimize my personal projects. In addition, I
+          am actively contributing to a HacktoberfrestES open source project to improve my
+          understanding and programming logic.
+        </span>
+        <span>
+          In my free time, I enjoy participating in hackathons and building small projects to
+          experiment with new technologies. to experiment with new technologies. I am also an
+          energetic person who likes sports and a gamification enthusiast.
+        </span>
+        <span>
+          Jesus David is a fullstack developer committed to code quality and user satisfaction. My
+          goal is to create digital products that are both functional and aesthetically pleasing.
         </span>
       </div>
       <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Like it</p>
-        <span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium! Lorem ipsum dolor sit amet
-        </span>
-      </div>
-      <div>
-        <p class="text-lg font-bold italic text-white/60 mb-3">Objectives</p>
-        <span>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, amet nobis deserunt
-          quisquam voluptates animi vel ducimus hic ex. Alias fugiat quae doloremque nam reiciendis
-          enim quaerat odio temporibus praesentium!
-        </span>
+        <div>
+          <span class="font-bold text-white/65 mb-3">INTERACTIONS AND MENTIONS</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <Image
+            loading="eager"
+            alt="me"
+            src="/img/mention-1.jpg"
+            class="rounded-2xl object-cover h-[] w-[600px]"
+            width={1212}
+            height={1260}
+          />
+          <Image
+            loading="eager"
+            alt="me"
+            src="/img/mention-2.jpg"
+            class="rounded-2xl object-cover h-[] w-[600px]"
+            width={1212}
+            height={1260}
+          />
+        </div>
       </div>
     </div>
     <div>
-      <CardContactMe />
+      <CardContactMe title="Contact with me!" />
     </div>
   </div>
 </MainLayout>
