@@ -13,7 +13,9 @@ import {
     AntDesign, 
     Postgres, 
     Sequelize,
-    Vuejs
+    Vuejs,
+    CSS,
+    HTML
 } from '../icons/icons-programming'
 
 
@@ -98,6 +100,16 @@ export const technologies = {
         title: 'Postgres',
         Icon: Postgres,
         order: 14
+    },
+    CSS: {
+        title: 'CSS',
+        Icon: CSS,
+        order: 15
+    },
+    HTML: {
+        title: 'HTML',
+        Icon: HTML,
+        order: 16
     },
 } as const satisfies Record<string, Technology>
 

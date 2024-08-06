@@ -20,8 +20,8 @@ import MainLayout from '@/layouts/MainLayout.astro'
       </span>
       <p></p>
     </header>
-    <div class="flex justify-center">
-      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+    <div class="flex justify-center w-[600px]">
+      <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {
           projects
             .sort((a, b) => parseInt(a.id) - parseInt(b.id))

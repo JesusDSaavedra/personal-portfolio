@@ -4,14 +4,21 @@ import type { Project } from '../../content/projects'
 import { technologies } from '@/content/technologies'
 import { Image } from 'astro:assets'
 
-const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
-
 interface Props {
   project: Project
   isPageWork: boolean
 }
 
 const { project, isPageWork } = Astro.props
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const {
+  [`title-${lang}` as 'title-en' | 'title-es']: title,
+  [`description-${lang}` as 'description-en' | 'description-es']: description,
+  image,
+  id,
+  state,
+  year
+} = project
 ---
 
 <article
@@ -62,13 +69,13 @@ const { project, isPageWork } = Astro.props
         class="capitalize text-accent-7 group-hover:text-primary"
         transition:name={`title-${project?.id}`}
       >
-        {project['title-en']}
+        {title}
       </h2>
       <p
         class="text-sm leading-6 text-left text-white/60"
         transition:name={`description-${project?.id}`}
       >
-        {project?.['description-en']}
+        {description}
       </p>
     </div>
   </a>
