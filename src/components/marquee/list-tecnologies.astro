@@ -14,7 +14,7 @@ import CardTech from './card-tech.astro'
         .sort((a, b) => a.order - b.order)
         .map((item, index) => {
           const { title, Icon } = item
-          return <CardTech key={index} title={title.toUpperCase()} Icon={Icon} />
+          return <CardTech title={title.toUpperCase()} Icon={Icon} />
         })
     }
   </Marquee>
