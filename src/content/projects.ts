@@ -92,7 +92,7 @@ export const projects: Project[] = [
     {
         id: '2',
         logo: 'TTVIP.svg',
-        "company-name": 'Ecuatorian registry',   
+        "company-name": 'Registraduría Ecuador',   
         "title-en": 'Your VIP procedures',
         "title-es": 'Tus tramites VIP',
         "description-en": "Digital platform that provides priority and personalized attention for all procedures.",

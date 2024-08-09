@@ -1,5 +1,69 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n'
 
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+
+const aboutURL = getRelativeLocaleUrl(lang, 'about')
+const workURL = getRelativeLocaleUrl(lang, 'work')
+const techStackURL = getRelativeLocaleUrl(lang, 'stack/grid')
+const timelineURL = getRelativeLocaleUrl(lang, 'timeline')
+
+const i18n = {
+  es: {
+    about: 'sobre mí',
+    work: 'trabajo',
+    techStack: 'tecnologías',
+    timeline: 'cronología'
+  },
+  en: {
+    about: 'about',
+    work: 'work',
+    techStack: 'tech stack',
+    timeline: 'timeline'
+  }
+}
 ---
 
-<footer></footer>
+<section class="mt-32 flex flex-col items-center gap-2">
+  <h5
+    class="leading-8 opacity-80 text-base font-medium text-light-gray dark:text-[var(--light-gray)] tracking-[-0.25px]"
+  >
+    ©jesus
+    <span class="text-[10px] mx-[2px] opacity-50">✦</span>
+    jesus david saavedra
+  </h5>
+  <ul class="flex flex-row gap-4 justify-center">
+    <li>
+      <a
+        href={aboutURL}
+        class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 text-light-gray dark:text-[var(--light-gray)]"
+      >
+        {i18n[lang].about}
+      </a>
+    </li>
+    <li>
+      <a
+        href={workURL}
+        class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 text-light-gray dark:text-[var(--light-gray)]"
+      >
+        {i18n[lang].work}
+      </a>
+    </li>
+    <li>
+      <a
+        href={techStackURL}
+        class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 text-light-gray dark:text-[var(--light-gray)]"
+      >
+        {i18n[lang].techStack}
+      </a>
+    </li>
+    <!-- <li>
+      <a
+        href={timelineURL}
+        class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 text-light-gray dark:text-[var(--light-gray)]"
+      >
+        {i18n[lang].timeline}
+      </a>
+    </li> -->
+  </ul>
+</section>
