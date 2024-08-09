@@ -5,7 +5,7 @@ import CardContactMe from '@/components/cards/card-contact-me.astro'
 
 import { cn } from '@/lib/utils'
 import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
-import ListTechnologies from '@/components/marquee/list-tecnologies.astro'
+import ListTechnologies from '../../components/marquee/list-tecnologies.astro'
 import RowLink from '@/icons/row-link.icon.astro'
 import { projects } from '@/content/projects'
 import { Image } from 'astro:assets'
@@ -35,7 +35,7 @@ import { Image } from 'astro:assets'
               className="inline-flex items-center justify-center px-4 py-1 transition -out hover:text-[#51415c] hover:duration-300 hover:dark:text-[#c38de7]"
             >
               <span class="flex flex-row items-center justify-center">
-                Disponible para trabajar
+                Available to work
                 <span class="scale-[0.65]">
                   <RowLink />
                 </span>
@@ -44,19 +44,23 @@ import { Image } from 'astro:assets'
           </div>
         </div>
       </div>
-      <span class="my-8 text-lg">
-        Soy desarrollador Fullstack, autodidacta, creativo y organizado, capaz de construir cosas
-        increibles atraves del software y la programación. Me gusta mucho el aprendizaje continuo y
-        los desafíos que me llevan a aprender cada día más, también tengo excelentes habilidades de
-        diseño y la capacidad de convertir los requisitos en aplicaciones escalables eficientes y
-        dinámicas.
+      <span class="my-8 text-base">
+        I am a proactive and adaptive Fullstack developer, I have built complete web applications
+        from scratch with its architecture. I have quickly adapted to new frameworks and
+        technologies, as I did when adopting Vue 3 in a project. I am able to work independently and
+        in a team, delivering high quality projects and meeting deadlines. I am an advocate of good
+        development practices, writing clean, scalable and efficient code. My passion for continuous
+        learning drives me to continuously improve my technical and soft skills.
       </span>
     </div>
     <div>
       <ListTechnologies />
     </div>
     <div class="mt-4">
-      <span class="text-2xl font-bold tracking-widern italic"> Proyectos </span>
+      <div class="flex flex-row justify-between items-center">
+        <span class="text-2xl font-bold tracking-widern italic"> Works </span>
+        <a href="/en/work" class="text-xs font-semibold capitalize"> All works ▸ </a>
+      </div>
       <div class="grid relative py-8 gap-4 lg:gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
         {
           projects
@@ -66,7 +70,7 @@ import { Image } from 'astro:assets'
       </div>
     </div>
     <div>
-      <CardContactMe title="Contáctame!" />
+      <CardContactMe title="Contact with me!" />
     </div>
   </div>
 </MainLayout>

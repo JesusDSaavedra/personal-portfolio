@@ -7,6 +7,8 @@ import { projects } from '@/content/projects'
 import { technologies } from '@/content/technologies'
 import { BorderBeam } from '@/components/magicui/border-beam'
 
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+
 const { id } = Astro.params
 
 const project = projects.find((project) => project.id === id)
@@ -16,7 +18,17 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
 ---
 
 <MainLayout>
-  <div>
+  <div class="relative p-4">
+    <div class="absolute top-0 left-0 ml-14 mt-8">
+      <a class="" href=`${lang === 'es' ? '/work' : 'en/work'}`>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 42 42"
+          ><path
+            fill="#999999"
+            fill-rule="evenodd"
+            d="M31 38.32L13.391 21L31 3.68L28.279 1L8 21.01L28.279 41z"></path></svg
+        >
+      </a>
+    </div>
     <div class="flex gap-7 justify-center">
       <div class="flex flex-col items-center max-w-[650px]">
         <header class="flex flex-col gap-4 w-[650px]">
@@ -34,20 +46,20 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
             }
             <div class="flex flex-col items-center">
               <h4 class="text-2xl font-medium" transition:name={`company-name-${project?.id}`}>
-                {project?.['company-name']}
+                {project?.[`company-name`]}
               </h4>
               <h3 class="text-xl font-medium" transition:name={`title-${project?.id}`}>
-                {project?.['title-en']}
+                {project?.[`title-${lang}`]}
               </h3>
             </div>
           </div>
           <div class="flex justify-center">
             <span class="text-center w-[480px]" transition:name={`description-${project?.id}`}>
-              {project?.[`description-en`]}
+              {project?.[`description-${lang}`]}
             </span>
           </div>
           <span class="text-center font-semibold text-lg text-white/70 mt-10">
-            Stack of technologies used
+            Pila de tecnologias usadas
           </span>
           <div class="flex justify-center gap-4">
             {
@@ -72,14 +84,14 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
             <BorderBeam size={250} duration={12} delay={9} borderWidth={2} />
           </div>
           <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
-            {project?.['firstParagraph-en']}
+            {project?.[`firstParagraph-${lang}`]}
           </p>
         </div>
         <div class="flex flex-col gap-6">
           {
-            project?.[`secondParagraph-en`] && (
+            project?.[`secondParagraph-${lang}`] && (
               <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
-                {project?.[`secondParagraph-en`]}
+                {project?.[`secondParagraph-${lang}`]}
               </p>
             )
           }
@@ -90,15 +102,15 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
                 width="150"
                 height="150"
                 src={`/img/${project?.images[0]}`}
-                alt={'project 1'}
+                alt={`project 1`}
                 class="w-full rounded-xl mt-5"
               />
             )
           }
           {
-            project?.[`thirdParagraph-en`] && (
+            project?.[`thirdParagraph-${lang}`] && (
               <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
-                {project?.[`thirdParagraph-en`]}
+                {project?.[`thirdParagraph-${lang}`]}
               </p>
             )
           }
@@ -115,9 +127,9 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
             )
           }
           {
-            project?.[`fourthParagraph-en`] && (
+            project?.[`fourthParagraph-${lang}`] && (
               <p class="text-base tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
-                {project?.[`fourthParagraph-en`]}
+                {project?.[`fourthParagraph-${lang}`]}
               </p>
             )
           }

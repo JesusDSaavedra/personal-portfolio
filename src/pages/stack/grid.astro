@@ -5,22 +5,28 @@ import { devices, technologiesAndFrameworks, tools } from '@/content/tech-stack'
 import GridIcon from '@/icons/grid.icon.astro'
 import ListIcon from '@/icons/list.icon.astro'
 import MainLayout from '@/layouts/MainLayout.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const techStackURL = getRelativeLocaleUrl(lang, 'stack/list')
 ---
 
 <MainLayout>
   <div class="px-4 pt-[14px] flex flex-col justify-center">
     <div class="relative flex flex-col">
       <div class="text-center max-w-[500px] m-auto p-6 flex flex-col items-center">
-        <h4 class="font-bold text-3xl italic tracking-wider mb-4">Tech Stack</h4>
+        <h4
+          class="text-3xl mb-3 font-bold tracking-[-1.2px] bg-repeat bg-clip-text bg-100% bg-text-gradient"
+          style="-webkit-text-fill-color:transparent"
+        >
+          Tecnologías
+        </h4>
         <p class="text-lg tracking-[-0.28px] leading-[140%]">
-          The following is my on-the-go app stack for designing, coding, managing, entertaining, and
-          all...
+          Esta es mi pila de aplicaciones para diseñar, programar, gestionar, entretener y todo...
         </p>
       </div>
       <section>
-        <div
-          class="flex justify-center w-fit items-center gap-3 dark:text-[var(--light-gray)] mx-auto mb-6"
-        >
+        <div class="flex justify-center w-fit items-center gap-3 dark:text-gray-500 mx-auto mb-6">
           <span class="opacity-40 font-semibold text-xs">Grid</span>
           <div
             class="flex justify-center w-fit rounded-[22px] p-[2px] bg-[rgba(34,36,44,.15)] dark:bg-[rgba(236,237,238,.15)]"
@@ -30,7 +36,7 @@ import MainLayout from '@/layouts/MainLayout.astro'
             >
               <GridIcon />
             </button>
-            <a class="flex p-1 rounded-[18px] bg-transparent" href="/stack/list">
+            <a class="flex p-1 rounded-[18px] bg-transparent" href={techStackURL}>
               <ListIcon />
             </a>
           </div>
@@ -39,7 +45,7 @@ import MainLayout from '@/layouts/MainLayout.astro'
         <h4
           class="text-center mt-10 opacity-70 text-light-gray dark:text-[var(--light-gray)] uppercase tracking-[2px] text-sm px-4 font-semibold"
         >
-          languages and frameworks
+          lenguajes y frameworks
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
           {technologiesAndFrameworks.map((tech) => <SquareStack tech={tech} />)}
@@ -47,7 +53,7 @@ import MainLayout from '@/layouts/MainLayout.astro'
         <h4
           class="text-center mt-10 opacity-70 text-light-gray dark:text-[var(--light-gray)] uppercase tracking-[2px] text-sm px-4 font-semibold"
         >
-          Tools
+          Herramientas
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
           {tools.map((tool) => <SquareStack tech={tool} />)}
@@ -55,7 +61,7 @@ import MainLayout from '@/layouts/MainLayout.astro'
         <h4
           class="text-center mt-10 opacity-70 text-light-gray dark:text-[var(--light-gray)] uppercase tracking-[2px] text-sm px-4 font-semibold"
         >
-          Devices
+          Dispositivos
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
           {devices.map((device) => <SquareStack tech={device} />)}

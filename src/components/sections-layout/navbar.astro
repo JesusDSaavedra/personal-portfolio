@@ -9,7 +9,6 @@ import EnglishIcon from '@/icons/english.icon.astro'
 import DarkTheme from '@/icons/dark-theme.icon.astro'
 import LightTheme from '@/icons/light-theme.icon.astro'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { currentlyLearning } from '@/content/tech-stack'
 
 const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
 const defaultPage = getRelativeLocaleUrl(lang, '')
@@ -26,10 +25,10 @@ const cleanPathname = pathname.substring(
 )
 const splitPathname = cleanPathname.split('/')
 const auxRedirect =
-  splitPathname.length > 1 && lang !== 'en'
+  splitPathname.length > 1 && lang !== 'es'
     ? splitPathname.toSpliced(0, 1).join('/')
     : splitPathname.join('/')
-const redirect = auxRedirect === 'es' || auxRedirect === '/' ? '' : auxRedirect
+const redirect = auxRedirect === 'en' || auxRedirect === '/' ? '' : auxRedirect
 
 const i18n = {
   es: {
@@ -45,8 +44,6 @@ const i18n = {
     timeline: 'timeline'
   }
 }
-
-console.log(Astro.currentLocale)
 ---
 
 <nav class="w-[800px] my-5">
@@ -79,7 +76,7 @@ console.log(Astro.currentLocale)
       </a>
       <hr class="h-4 w-[1px] shrink-0 bg-gray-400" />
 
-      <a href={`${lang === 'es' ? `/${redirect}` : `/es/${redirect}`}`}>
+      <a href={`${lang === 'en' ? `/${redirect}` : `/en/${redirect}`}`}>
         {lang === 'es' ? <SpanishIcon /> : <EnglishIcon />}
       </a>
       <a href="https://www.linkedin.com/in/jesusdsaavedra88/" target="_blank" class="">
