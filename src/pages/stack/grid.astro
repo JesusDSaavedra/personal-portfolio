@@ -47,7 +47,9 @@ const techStackURL = getRelativeLocaleUrl(lang, 'stack/list')
         >
           lenguajes y frameworks
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div
+          class="relative mt-3 mx-auto md:w-full grid justify-items-center gap-2 p-1 w-fit grid-cols-5 sm:grid-cols-3"
+        >
           {technologiesAndFrameworks.map((tech) => <SquareStack tech={tech} />)}
         </div>
         <h4
@@ -55,7 +57,9 @@ const techStackURL = getRelativeLocaleUrl(lang, 'stack/list')
         >
           Herramientas
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div
+          class="relative mt-3 mx-auto md:w-full grid justify-items-center gap-2 p-1 w-fit grid-cols-5 sm:grid-cols-3"
+        >
           {tools.map((tool) => <SquareStack tech={tool} />)}
         </div>
         <h4
@@ -63,7 +67,9 @@ const techStackURL = getRelativeLocaleUrl(lang, 'stack/list')
         >
           Dispositivos
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div
+          class="relative mt-3 mx-auto md:w-full grid justify-items-center gap-2 p-1 w-fit grid-cols-5 sm:grid-cols-3"
+        >
           {devices.map((device) => <SquareStack tech={device} />)}
         </div>
       </section>
