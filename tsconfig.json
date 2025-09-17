@@ -9,8 +9,6 @@
       "@/icons": ["src/icons/*"],
       "@/layouts": ["src/layouts/*"],
       "@/content": ["src/content/*"]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    }
   }
 }

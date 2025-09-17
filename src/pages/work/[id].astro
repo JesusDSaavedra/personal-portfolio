@@ -61,15 +61,15 @@ const filteredTechnologies = project?.['stack-tech'].map((techName) => {
               {project?.[`description-${lang}`]}
             </span>
           </div>
-          <span class="text-center font-semibold text-lg text-white/70 mt-10">
+          <span
+            class="text-center font-semibold text-lg text-dark dark:text-[var(--white-text)] mt-10"
+          >
             Pila de tecnologias usadas
           </span>
           <div class="flex md:flex-wrap justify-center gap-4">
             {
               filteredTechnologies?.map((technologie) => (
-                <div class="flex justify-center items-center rounded-3xl w-24 h-24 shadow-2xl bg-slate-800/40">
-                  <CardTech Icon={technologie.Icon} title={technologie.title} padding={0} />
-                </div>
+                <CardTech Icon={technologie.Icon} title={technologie.title} padding={0} />
               ))
             }
           </div>

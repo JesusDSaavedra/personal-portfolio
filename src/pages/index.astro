@@ -3,8 +3,7 @@ import MainLayout from '@/layouts/MainLayout.astro'
 import CardProject from '@/components/cards/card-project.astro'
 import CardContactMe from '@/components/cards/card-contact-me.astro'
 
-import { cn } from '@/lib/utils'
-import AnimatedShinyText from '@/components/magicui/animated-shiny-text'
+import { ShineBorder } from '@/components/magicui/shine-border'
 import ListTechnologies from '@/components/marquee/list-tecnologies.astro'
 import RowLink from '@/icons/row-link.icon.astro'
 import { projects } from '@/content/projects'
@@ -27,20 +26,24 @@ import { Image } from 'astro:assets'
         <div class="ml-6 flex flex-col sm:ml-0 sm:items-center justify-center">
           <span class="font-bold text-2xl italic tracking-wider">Jesus David Saavedra</span>
           <div
-            class={cn(
-              'max-w-max mt-2 group rounded-full border border-black/5 text-white transition-all ease-in hover:cursor-pointer dark:border-[#8577a8] dark:hover:border-[#c38de7] bg-background'
-            )}
+            class="relative rounded-full border mt-2 border-black/5 text-white transition-all ease-in hover:cursor-pointer dark:border-[#8577a8] dark:hover:border-[#c38de7] bg-background px-4 py-2"
           >
-            <AnimatedShinyText
-              className="inline-flex items-center justify-center px-4 py-1 transition -out hover:text-[#51415c] hover:duration-300 hover:dark:text-[#c38de7]"
-            >
-              <span class="flex flex-row items-center justify-center">
+            <a href="https://www.linkedin.com/in/jesusdsaavedra88/" target="_blank" class="">
+              <ShineBorder
+                shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+                duration={3}
+                borderWidth={2}
+                className="rounded-full"
+              />
+              <span
+                class="relative flex flex-row items-center justify-center text-sm font-medium text-dark dark:text-slate-100"
+              >
                 Disponible para trabajar
-                <span class="scale-[0.65]">
+                <span class="scale-[0.65] ml-1">
                   <RowLink />
                 </span>
               </span>
-            </AnimatedShinyText>
+            </a>
           </div>
         </div>
       </div>

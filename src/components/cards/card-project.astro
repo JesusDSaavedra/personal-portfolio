@@ -22,7 +22,7 @@ const {
 ---
 
 <article
-  class="relative rounded-lg overflow-hidden flex gap-4 flex-col group border border-dashed hover:border-solid transition-[border] duration-500 hover:border-accent-3 bg-background border-white/20"
+  class="relative rounded-3xl overflow-hidden flex gap-4 flex-col group hover:border-solid transition-[border] duration-500 hover:border-accent-3 dark:bg-neutral-400/10 backdrop-blur-[2px] border border-neutral-400/20"
 >
   <a href={`${lang === 'en' ? `/en/work/${project.id}` : `/work/${project.id}`}`}>
     <div class="bg-noise relative">
@@ -30,7 +30,7 @@ const {
         class="absolute w-full z-10 top-4 px-3 inset-x-0 mx-auto flex items-center justify-end"
       >
         <div
-          class="px-2 py-1 w-fit text-xs rounded-md bg-[rgb(26,26,26)] text-accent-7"
+          class="px-2 py-1 w-fit text-xs rounded-md bg-slate-50 dark:bg-[rgb(26,26,26)] text-accent-7"
           transition:name={`company-name-${project?.id}`}
         >
           {project['company-name']}
@@ -41,7 +41,7 @@ const {
         alt=`${project.image}`
         width={350}
         height={350}
-        class="w-full object-cover bg-gray-100 aspect-video group-hover:grayscale-0 opacity-80 group-hover:scale-105 transition-all duration-300"
+        class="w-full object-cover bg-gray-100 aspect-video group-hover:grayscale-0 opacity-80 group-hover:scale-105 transition-all duration-300 rounded-t-3xl"
         style="color:transparent;mask-image:linear-gradient(to bottom, black, transparent)"
         src={`/img/${project.image}`}
       />
@@ -53,7 +53,7 @@ const {
               const { Icon } = currentTech
               return (
                 <span
-                  class="aspect-square bg-accent-2 overflow-hidden rounded-full scale-[0.44] bg-[rgba(53,53,53,0.81)] p-2 border-2 border-white/40"
+                  class="aspect-square bg-accent-2 overflow-hidden rounded-full scale-[0.44] bg-[rgba(221,221,221,0.78)] dark:bg-[rgba(53,53,53,0.81)] p-2 border-2 border-white/20"
                   style={`z-index:${index}`}
                 >
                   <Icon />
@@ -72,7 +72,7 @@ const {
         {title}
       </h2>
       <p
-        class="text-sm leading-6 text-left text-white/60"
+        class="text-sm leading-6 text-left text-dark/80 dark:text-white/60"
         transition:name={`description-${project?.id}`}
       >
         {description}

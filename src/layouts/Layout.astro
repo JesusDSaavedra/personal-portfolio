@@ -10,7 +10,7 @@ const { currentLocale } = Astro
 ---
 
 <!doctype html>
-<html lang={currentLocale}>
+<html lang={currentLocale} class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Personal Portfolio, Jesus David Saavedra" />
@@ -27,10 +27,16 @@ const { currentLocale } = Astro
     <title>{title}</title>
     <ViewTransitions fallback="none" />
   </head>
-  <body class="p-0 m-0 text-zinc-300">
+  <body class="p-0 m-0 text-dark dark:bg-[var(--black)] dark:text-[var(--white-text)]">
     <slot />
     <style is:global>
       :root {
+        --black: #252f3cd9;
+        --white-text: #ecedee;
+        --nav-bg: #252f3cd9;
+        --retro-2c: #566cec;
+        --grey-100: rgba(255, 255, 255, 0.1);
+        --light-gray: rgba(114, 120, 136, 0.6);
         --accent: 136, 58, 234;
         --accent-light: 224, 204, 250;
         --accent-dark: 49, 10, 101;
@@ -59,5 +65,24 @@ const { currentLocale } = Astro
         mask-image: radial-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 40%, transparent 80%);
       }
     </style>
+    <script is:inline>
+      document.addEventListener('astro:page-load', () => {
+        let theme = (() => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme')
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark'
+          }
+          return 'light'
+        })()
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark')
+        } else {
+          document.documentElement.classList.add('dark')
+        }
+        window.localStorage.setItem('theme', theme)
+      })
+    </script>
   </body>
 </html>
