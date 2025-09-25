@@ -1,4 +1,7 @@
 import {
+    Flutter,
+    Storybook,
+    Nativescript,
     Astrojs,
     Docker,
     Git,
@@ -36,80 +39,95 @@ export const technologies = {
         Icon: Javascript,
         order: 2
     },
+    Nativescript: {
+        title: 'Nativescript',
+        Icon: Nativescript,
+        order: 10,
+    },
+    Flutter: {
+        title: 'Flutter',
+        Icon: Flutter,
+        order: 3
+    },
     React: {
         title: 'React',
         Icon: React,
-        order: 3
+        order: 4
     },
     Vuejs: {
         title: 'Vue.js',
         Icon: Vuejs,
-        order: 4
+        order: 5
+    },
+    Storybook: {
+        title: 'Storybook',
+        Icon: Storybook,
+        order: 19
     },
     Tailwindcss: {
         title: 'Tailwind CSS',
         Icon: Tailwindcss,
-        order: 5
+        order: 6
     },
     Nodejs: {
         title: 'Node.js',
         Icon: Nodejs,
-        order: 6
+        order: 7
     },
     Express: {
         title: 'Express.js',
         Icon: Expressjs,
-        order: 7
+        order: 8
     },
     Sequelize: {
         title: 'Sequelize',
         Icon: Sequelize,
-        order: 8
+        order: 9
     },
     MongoDB: {
         title: 'MongoDB',
         Icon: MongoDB,
-        order: 9
+        order: 10
     },
     Docker: {
         title: 'Docker',
         Icon: Docker,
-        order: 10
+        order: 11
     },
     Git: {
         title: 'Git',
         Icon: Git,
-        order: 11
+        order: 12
     },
     AntDesign: {
         title: 'Ant Design',
         Icon: AntDesign,
-        order: 12
+        order: 13
     },
     Astrojs: {
         title: 'Astro.js',
         Icon: Astrojs,
-        order: 13
+        order: 14
     },
     Sass: {
         title: 'Sass',
         Icon: Sass,
-        order: 14
+        order: 15
     },
     Postgres: {
         title: 'Postgres',
         Icon: Postgres,
-        order: 14
+        order: 16
     },
     CSS: {
         title: 'CSS',
         Icon: CSS,
-        order: 15
+        order: 17
     },
     HTML: {
         title: 'HTML',
         Icon: HTML,
-        order: 16
+        order: 18
     },
 } as const satisfies Record<string, Technology>
 

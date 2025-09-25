@@ -43,6 +43,14 @@ export const technologiesAndFrameworks: TechnologyAndFramework[] = [
     'Es un framework de Javascript que utiliza "alto desacoplamiento", lo que permite crear progresivamente interfaces de usuario.'
   },
   {
+    name: 'Flutter',
+    logo: '/flutter.webp',
+    url: 'https://flutter.dev/',
+    'description-en': 'It is Google\'s UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.',
+    'description-es':
+    'Es el toolkit de UI de Google para crear aplicaciones compiladas nativamente para móvil, web y escritorio desde una sola base de código.'
+  },
+  {
     name: 'JavaScript',
     logo: '/javascript.webp',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -121,6 +129,14 @@ export const technologiesAndFrameworks: TechnologyAndFramework[] = [
     'description-es': 'Es un preprocesador de CSS que permite escribir estilos más eficientes y mantenibles utilizando variables y funciones.'
   },
   {
+    name: 'Storybook',
+    logo: '/storybook.webp',
+    url: 'https://storybook.js.org/',
+    'description-en': 'It is a tool for building UI components and pages in isolation, allowing developers to create, test and document components efficiently.',
+    'description-es':
+      'Es una herramienta para construir componentes de UI y páginas de forma aislada, permitiendo a los desarrolladores crear, probar y documentar componentes eficientemente.'
+  },
+  {
     name: 'Ant Design',
     logo: '/ant-design.webp',
     url: 'https://sass-lang.com/',
@@ -161,11 +177,45 @@ export const tools: TechnologyAndFramework[] = [
       'Es un editor de código versátil y ligero, ideal para desarrollar software y aplicaciones web modernas.'
   },
   {
+    name: 'Cursor',
+    logo: '/cursor.webp',
+    url: 'https://cursor.sh/',
+    'description-en':
+      'AI-powered code editor built for pair programming with AI, designed to enhance productivity and code quality.',
+    'description-es':
+      'Es un editor de código impulsado por IA, diseñado para programar en pareja con inteligencia artificial y mejorar la productividad.'
+  },
+  {
     name: 'Git',
     logo: '/git.webp',
     url: 'https://git-scm.com/',
     'description-en': 'A free and open source distributed version control system',
     'description-es': 'Es un sistema de control de versiones distribuido, crucial para el seguimiento y colaboración en proyectos de software.'
+  },
+  {
+    name: 'Warp',
+    logo: '/warp.webp',
+    url: 'https://www.warp.dev/',
+    'description-en':
+      'Modern terminal built for speed and productivity, with features like intelligent command completion and collaborative workflows.',
+    'description-es':
+      'Terminal moderno construido para velocidad y productividad, con características como autocompletado inteligente y flujos de trabajo colaborativos.'
+  },
+  {
+    name: 'Jira',
+    logo: '/jira.webp',
+    url: 'https://www.atlassian.com/software/jira',
+    'description-en':
+      'Project management and issue tracking software for agile teams, helping to plan, track and manage software development projects.',
+    'description-es':
+      'Software de gestión de proyectos y seguimiento de incidencias para equipos ágiles, ayuda a planificar, rastrear y gestionar proyectos de desarrollo de software.'
+  },
+  {
+    name: 'Slack',
+    logo: '/slack.webp',
+    url: 'https://slack.com/',
+    'description-en': 'Business communication and collaboration platform that functions as a unified digital workspace.',
+    'description-es': 'Plataforma de comunicación y colaboración empresarial que funciona como un espacio de trabajo digital unificado.'
   },
   {
     name: 'Youtube music',
@@ -188,13 +238,6 @@ export const tools: TechnologyAndFramework[] = [
     'description-en': 'It is a Markdown-based notes and knowledge software designed for advanced personal organisation and productivity.',
     'description-es': 'Es un software de notas y conocimiento basado en Markdown, diseñado para organización y productividad personal avanzada.'
   },
-  {
-    name: 'Slack',
-    logo: '/slack.webp',
-    url: 'https://slack.com/',
-    'description-en': 'Business communication and collaboration platform that functions as a unified digital workspace.',
-    'description-es': 'Plataforma de comunicación y colaboración empresarial que funciona como un espacio de trabajo digital unificado.'
-  }
 ]
 
 export const devices: TechnologyAndFramework[] = [

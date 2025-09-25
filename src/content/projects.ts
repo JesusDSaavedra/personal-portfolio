@@ -15,6 +15,10 @@ export interface Project {
     images: string[]
     video?: string
     year?: string
+    'main-impact-en'?: string
+    'main-impact-es'?: string
+    'work-highlights-en'?: string[]
+    'work-highlights-es'?: string[]
     'firstParagraph-en'?: string
     'firstParagraph-es'?: string
     'secondParagraph-en'?: string
@@ -32,24 +36,32 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: '1',
-        "company-name": 'Ginko Financial Solutions',        
-        logo: 'ginko.svg',
-        "title-en": 'PSD Demo',
-        "title-es": 'PSD Demo',
-        "description-en": "Omnichannel platform for administration, management and integration of digital financial applications and services.",
-        "description-es": "Plataforma omnicanal de administración, gestión e integración de aplicaciones y servicios digitales financieros.",
-        image: "project-1.webp",
-        "stack-tech": ['Vuejs', 'TypeScript','Sass','Docker','AntDesign','Git'],
+        "company-name": 'Global66',        
+        logo: 'global66.svg',
+        "title-en": 'Mobile App & B2B Web',
+        "title-es": 'App Móvil y Web B2B',
+        "description-en": "Chilean fintech specialized in international transfers and digital financial solutions for individuals and businesses across Latin America.",
+        "description-es": "Fintech chilena especializada en transferencias internacionales y soluciones financieras digitales para personas y empresas en Latinoamérica.",
+        "stack-tech": ['Nativescript','Vuejs','TypeScript','Sass','Storybook','Git'],
+        image: "project-5.webp",
         state: "private",
-        images: ['project-1-1.webp', 'project-1-2.webp', 'project-1-3.webp'],
-        "firstParagraph-en": 'As a frontend developer, I performed from scratch the complete development of a suite of three web applications (front office, back office and banking). Using Vue 3 and a modular architecture, I built highly responsive and easy to use user interfaces, aligned with the designs provided by the design team.',
-        "firstParagraph-es": 'Como desarrollador frontend, realice desde cero el desarrollo completo de una suite de tres aplicaciones web (front office, back office y bancapersonas). Utilizando Vue 3 y una arquitectura modular, construí interfaces de usuario altamente responsivas y fáciles de usar, alineadas con los diseños proporcionados por el equipo de diseño.',
-        "secondParagraph-en": 'I implemented critical functionalities such as user authentication, real time data management, transfer, a CRUD for recipients, product visualization, information visualization through interactive graphs and integration with an API Gateway. To ensure code quality and application scalability, I used Pinia for global state management, Vitest for unit testing and a CI/CD pipeline based on GitLab.',
-        "secondParagraph-es": 'Implementé funcionalidades críticas como autenticación de usuarios, gestión de datos en tiempo real, realización de transferencias, todo un CRUD para destinatarios, visualización de productos, visualización de información a través de gráficos interactivos y la integración con una API Gateway. Para garantizar la calidad del código y la escalabilidad de las aplicaciones, empleé Pinia para administrar el estado global, Vitest para realizar pruebas unitarias y un pipeline de CI/CD basada en GitLab.',
-        "thirdParagraph-en": 'Despite the time and budget constraints since it was a demo, I managed to deliver a high quality product that met all the requirements of the project. During development, I faced challenges such as performance optimization for mobile devices and integration with legacy systems, which I solved by implementing caching techniques and using specialized libraries.',
-        "thirdParagraph-es": 'A pesar de las limitaciones de tiempo y presupuesto, ya que era una demo, logré entregar un producto de alta calidad que cumplió con todos los requisitos del proyecto. Durante el desarrollo, enfrenté desafíos como la optimización del rendimiento para dispositivos móviles y la integración con sistemas heredados, los cuales resolví mediante la implementación de técnicas de caching y la utilización de bibliotecas especializadas.',
-        "fourthParagraph-en": 'Through this project, I consolidated my frontend skills, improved my ability to work autonomously and in a team, and gained a solid understanding of frontend development principles. In addition, I learned how to prioritize tasks, manage changing requirements, and deliver high quality products under pressure.',
-        "fourthParagraph-es": 'A través de este proyecto, consolidé mis habilidades en el frontend, mejoré mi capacidad para trabajar de manera autónoma y en equipo, y adquirí una sólida comprensión de los principios de desarrollo frontend. Además, aprendí a priorizar las tareas, gestionar los cambios de requisitos y entregar productos de alta calidad bajo presión.',
+        images: ['project-5.webp', 'project-5-1.webp', 'project-5-2.webp', 'project-5-3.webp'],
+        "main-impact-en": "Modernized B2B/B2C applications through strategic component migration and financial platform development, achieving 8% performance improvement while implementing comprehensive virtual and physical card management systems.",
+        "main-impact-es": "Modernizé aplicaciones B2B/B2C mediante migración estratégica de componentes y desarrollo de plataforma financiera, logrando una mejora del 8% en rendimiento mientras implementaba sistemas completos de gestión de tarjetas virtuales y físicas.",
+        "work-highlights-en": [
+            "Developed and maintained B2B and B2C web and mobile applications using Vue3 and Vue2 (NativeScript) with Clean Architecture, ensuring scalable and maintainable code structure across multiple platforms.",
+            "Successfully migrated 8 key components and refactored legacy code, improving application performance by 8% and accelerating new feature delivery through enhanced code efficiency and modernization.",
+            "Implemented comprehensive virtual and physical card functionalities from scratch, including purchase limit configuration and transaction management systems, enabling complete financial card lifecycle management.",
+            "Resolved medium, high, and urgent severity incidents with precision, maintaining system stability and ensuring continuous service availability for critical business operations.",
+            "Optimized development processes by implementing contextualized AI agents with architecture and technical documentation, significantly reducing integration times and improving development workflow efficiency."
+        ],
+        "work-highlights-es": [
+            "Desarrollé y mantuve aplicaciones web y móviles B2B y B2C utilizando Vue3 y Vue2 (NativeScript) con Arquitectura Limpia, asegurando una estructura de código escalable y mantenible en múltiples plataformas.",
+            "Migré exitosamente 8 componentes clave y refactoricé código legacy, mejorando el rendimiento de la aplicación en un 8% y acelerando la entrega de nuevas funcionalidades mediante mayor eficiencia y modernización del código.",
+            "Implementé funcionalidades completas para tarjetas virtuales y físicas desde cero, incluyendo configuración de límites de compra y sistemas de gestión de transacciones, habilitando la gestión integral del ciclo de vida de tarjetas financieras.",
+            "Resolví incidentes de gravedad media, alta y urgente con precisión, manteniendo la estabilidad del sistema y asegurando la disponibilidad continua del servicio para operaciones críticas del negocio.",
+            "Optimicé procesos de desarrollo implementando agentes de IA contextualizados con arquitectura y documentación técnica, reduciendo significativamente los tiempos de integración y mejorando la eficiencia del flujo de trabajo de desarrollo."
+        ]
     //     timeline: [
     //         {
     //             id: 1,
@@ -91,6 +103,73 @@ export const projects: Project[] = [
     },
     {
         id: '2',
+        "company-name": 'Ginko Financial Solutions',        
+        logo: 'ginko.svg',
+        "title-en": 'PSD Demo',
+        "title-es": 'PSD Demo',
+        "description-en": "Omnichannel platform for administration, management and integration of digital financial applications and services.",
+        "description-es": "Plataforma omnicanal de administración, gestión e integración de aplicaciones y servicios digitales financieros.",
+        "stack-tech": ['Vuejs', 'TypeScript','Sass','Docker','AntDesign','Storybook','Git'],
+        image: "project-1.webp",
+        state: "private",
+        images: ['project-1.webp','project-1-1.webp', 'project-1-2.webp', 'project-1-3.webp'],
+        "main-impact-en": "Led the complete development of PSD project suite comprising three interconnected web applications with modular architecture, implementing critical financial functionalities and establishing robust CI/CD infrastructure for long-term scalability.",
+        "main-impact-es": "Lideré el desarrollo completo de la suite del proyecto PSD compuesta por tres aplicaciones web interconectadas con arquitectura modular, implementando funcionalidades financieras críticas y estableciendo infraestructura CI/CD robusta para escalabilidad a largo plazo.",
+        "work-highlights-en": [
+            "Led the PSD project from conception to deployment, developing a complete suite of three web applications (front office, back office, and personal banking) with modular and scalable architecture, establishing the foundation for comprehensive financial service management.",
+            "Implemented Clean Architecture by dividing the system into independent layers, facilitating future expansions and ensuring long-term project maintainability through separation of concerns and modular design principles.",
+            "Developed critical financial functionalities including secure user authentication, real-time data management, comprehensive transfer system, and complete CRUD operations for recipient management, enabling full banking operation capabilities.",
+            "Created dynamic data visualizations with interactive charts and established robust API Gateway integration, providing users with intuitive financial insights and ensuring seamless communication between system components.",
+            "Implemented comprehensive development infrastructure using Pinia for global state management, Vitest for unit testing, and GitLab CI/CD pipeline, guaranteeing code quality, system stability, and automated deployment processes."
+        ],
+        "work-highlights-es": [
+            "Lideré el proyecto PSD desde la concepción hasta el despliegue, desarrollando una suite completa de tres aplicaciones web (front office, back office y banca personas) con arquitectura modular y escalable, estableciendo la base para la gestión integral de servicios financieros.",
+            "Implementé Clean Architecture dividiendo el sistema en capas independientes, facilitando expansiones futuras y asegurando el mantenimiento a largo plazo del proyecto mediante separación de responsabilidades y principios de diseño modular.",
+            "Desarrollé funcionalidades financieras críticas incluyendo autenticación segura de usuarios, gestión de datos en tiempo real, sistema integral de transferencias y operaciones CRUD completas para gestión de destinatarios, habilitando capacidades completas de operación bancaria.",
+            "Creé visualizaciones dinámicas de datos con gráficos interactivos y establecí integración robusta con API Gateway, proporcionando a los usuarios insights financieros intuitivos y asegurando comunicación fluida entre componentes del sistema.",
+            "Implementé infraestructura de desarrollo integral utilizando Pinia para gestión de estado global, Vitest para pruebas unitarias y pipeline CI/CD con GitLab, garantizando calidad del código, estabilidad del sistema y procesos de despliegue automatizados."
+        ]
+    //     timeline: [
+    //         {
+    //             id: 1,
+    //             date: '',
+    //             title: 'Login realization',
+    //             location: '',
+    //             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus',
+    //             type: 'work',
+    //             image: 'project-3.webp',
+    //         },
+    //         {
+    //             id: 2,
+    //             date: '',
+    //             title: 'Dashboard creation',
+    //             location: '',
+    //             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus',
+    //             type: 'work',
+    //             image: 'project-3.webp',
+    //         },
+    //         {
+    //             id: 3,
+    //             date: '',
+    //             title: 'Transaction functionality ',
+    //             location: '',
+    //             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus',
+    //             type: 'work',
+    //             image: 'project-3.webp',
+    //         },
+    //         {
+    //             id: 4,
+    //             date: '',
+    //             title: 'Enable - Disable users',
+    //             location: '',
+    //             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero iusto itaque molestiae nemo magni quis enim maxime repellendus ',
+    //             type: 'work',
+    //             image: 'project-3.webp',
+    //         },
+    //     ]
+    },
+    {
+        id: '3',
         logo: 'TTVIP.svg',
         "company-name": 'Registraduría Ecuador',   
         "title-en": 'Your VIP procedures',
@@ -100,11 +179,19 @@ export const projects: Project[] = [
         image: "project-2.webp",
         "stack-tech": ['React','Sass','TypeScript','Git',],
         state: "private",
-        images: ['project-2-1.webp','project-2-3.webp',],
-        "firstParagraph-en": 'As a frontend developer, I developed and realized the responsive designs of the web application, ensuring an optimal user experience on any kind of device. In addition, I implemented a geolocation system based on Google Maps API to help users find the nearest notaries quickly and easily. To improve customer service, I developed an all the interface and iteractivity of a chatbot that was realized with Dialogflow, able to answer frequently asked questions and redirect to a human advisor when needed. During my time on the project, I fixed bugs and optimized the performance of the application by 10%.',
-        "firstParagraph-es": 'Como desarrollador frontend, desarrolle y realicé los diseños resposivos de la aplicación web, asegurando una experiencia de usuario óptima en cualquier tipo de dispositivo. Además, implementé un sistema de geolocalización basado en la API de Google Maps para ayudar a los usuarios a encontrar las notarias más cercanas de forma rápida y sencilla. Para mejorar la atención al cliente, desarrollé un toda la interfaz e interactividad de un chatbot que fue realizado con Dialogflow, capaz de responder a las preguntas más frecuentes y redirigir a un asesor humano cuando sea necesario. Durante mi tiempo en el proyecto, solucioné bugs y optimicé el rendimiento de la aplicación en un 10%.',
-        "secondParagraph-en": 'During the development of the application, I faced the challenge of optimizing the performance of the notary search page. Through the implementation of lazy loading techniques and file minification, I managed to significantly reduce the page load time, thus improving the user experience.',
-        "secondParagraph-es": 'Durante el desarrollo de la aplicación, me enfrenté al desafío de optimizar el rendimiento de la página de búsqueda de notarias. A través de la implementación de técnicas de lazy loading y la minificación de archivos, logré reducir significativamente el tiempo de carga de la página, mejorando así la experiencia del usuario.',
+        images: ['project-2.webp','project-2-1.webp','project-2-2.webp','project-2-3.webp',],
+        "main-impact-en": "Enhanced government web application accessibility and user experience through responsive interface development, intelligent geolocation services, and automated customer service integration, modernizing citizen digital interaction with government services.",
+        "main-impact-es": "Mejoré la accesibilidad y experiencia de usuario de aplicación web gubernamental mediante desarrollo de interfaces responsive, servicios inteligentes de geolocalización e integración de atención al cliente automatizada, modernizando la interacción digital ciudadana con servicios gubernamentales.",
+        "work-highlights-en": [
+            "Developed comprehensive responsive interfaces for government web application, ensuring optimal user experience across all devices and screen sizes, improving accessibility and citizen engagement with government digital services.",
+            "Implemented advanced geolocation system using Google Maps API to enable efficient location of nearby notaries, streamlining citizen access to essential legal services through intelligent geographic search capabilities.",
+            "Developed complete chatbot interface integrated with Dialogflow, optimizing automated customer service and providing 24/7 citizen support, reducing response times and improving overall service quality for government inquiries."
+        ],
+        "work-highlights-es": [
+            "Desarrollé interfaces responsive integrales para aplicación web gubernamental, asegurando experiencia de usuario óptima en todos los dispositivos y tamaños de pantalla, mejorando la accesibilidad y participación ciudadana con servicios digitales gubernamentales.",
+            "Implementé sistema de geolocalización avanzado utilizando Google Maps API para permitir localización eficiente de notarías cercanas, agilizando el acceso ciudadano a servicios legales esenciales mediante capacidades inteligentes de búsqueda geográfica.",
+            "Desarrollé interfaz completa de chatbot integrada con Dialogflow, optimizando la atención al cliente automatizada y proporcionando soporte ciudadano 24/7, reduciendo tiempos de respuesta y mejorando la calidad general del servicio para consultas gubernamentales."
+        ]
         // timeline: [
         //     {
         //         id: 1,
@@ -136,7 +223,7 @@ export const projects: Project[] = [
         // ]
     },
     {
-        id: '3',
+        id: '4',
         'title-en': 'Backend - Online Store',
         'title-es': 'Backend - Tienda Online',
         "description-en": "Personal project: Complete backend development for an online store, including authentication, product management, shopping cart and favorites.",
@@ -144,15 +231,28 @@ export const projects: Project[] = [
         image: "project-3.webp",
         "stack-tech": ['Nodejs','Express','Postgres','Sequelize'],
         state: "public",
-        images: ['project-3-1.webp'],
-        "firstParagraph-en": 'I developed a complete backend using Node.js, Express.js and PostgreSQL for an online store. I implemented a strong authentication system with JWT to protect user data. In addition, I designed a RESTful API to manage the product catalog, allowing CRUD operations and advanced search. I used Sequelize as ORM to interact with the database and improve code efficiency.',
-        "firstParagraph-es": 'Desarrollé un backend completo utilizando Node.js, Express.js y PostgreSQL para una tienda en línea. Implementé un sistema de autenticación robusto con JWT para proteger los datos de los usuarios. Además, diseñé una API RESTful para gestionar el catálogo de productos, permitiendo operaciones CRUD y búsqueda avanzada. Utilicé Sequelize como ORM para interactuar con la base de datos y mejorar la eficiencia del código.',
-        "secondParagraph-en": 'I created a favorites section and a shopping cart, storing user data securely and allowing users to manage their favorite products and make purchases. To optimize application performance, I implemented caching using Redis and performed load testing to identify and fix bottlenecks.',
-        "secondParagraph-es": 'Creé una sección de favoritos y un carrito de compras, almacenando los datos de los usuarios de forma segura y permitiendo a los usuarios gestionar sus productos favoritos y realizar compras. Para optimizar el rendimiento de la aplicación, implementé caché utilizando Redis y realicé pruebas de carga para identificar y solucionar cuellos de botella.',
-        
+        images: ['project-3-1.webp', 'project-3.webp'],
+        "main-impact-en": "Architected and developed a complete e-commerce backend solution with secure authentication, advanced product management, and performance optimization, creating a scalable foundation for online retail operations.",
+        "main-impact-es": "Arquitecturé y desarrollé una solución backend completa de e-commerce con autenticación segura, gestión avanzada de productos y optimización de rendimiento, creando una base escalable para operaciones de venta en línea.",
+        "work-highlights-en": [
+        "Developed a complete backend infrastructure using Node.js, Express.js, and PostgreSQL for an online store, establishing a robust and scalable foundation for e-commerce operations with modern web technologies.",
+        "Implemented comprehensive authentication system with JWT tokens to protect user data and secure all application endpoints, ensuring data privacy and compliance with security best practices.",
+        "Designed and built RESTful API architecture for product catalog management, enabling full CRUD operations and advanced search functionality, streamlining inventory management and product discovery.",
+        "Integrated Sequelize ORM for efficient database interactions, improving code maintainability and development efficiency through object-relational mapping and query optimization.",
+        "Created user-centric features including favorites section and shopping cart functionality, securely storing user data and enabling seamless product management and purchase workflows.",
+        "Optimized application performance through Redis caching implementation and conducted comprehensive load testing to identify and resolve bottlenecks, ensuring optimal system responsiveness under high traffic conditions."
+        ],
+        "work-highlights-es": [
+        "Desarrollé una infraestructura backend completa utilizando Node.js, Express.js y PostgreSQL para una tienda en línea, estableciendo una base robusta y escalable para operaciones de e-commerce con tecnologías web modernas.",
+        "Implementé sistema de autenticación integral con tokens JWT para proteger datos de usuarios y asegurar todos los endpoints de la aplicación, garantizando privacidad de datos y cumplimiento de mejores prácticas de seguridad.",
+        "Diseñé y construí arquitectura API RESTful para gestión de catálogo de productos, habilitando operaciones CRUD completas y funcionalidad de búsqueda avanzada, optimizando la gestión de inventario y descubrimiento de productos.",
+        "Integré Sequelize ORM para interacciones eficientes con la base de datos, mejorando la mantenibilidad del código y eficiencia de desarrollo mediante mapeo objeto-relacional y optimización de consultas.",
+        "Creé funcionalidades centradas en el usuario incluyendo sección de favoritos y funcionalidad de carrito de compras, almacenando datos de usuarios de forma segura y habilitando flujos fluidos de gestión de productos y compras.",
+        "Optimicé el rendimiento de la aplicación mediante implementación de caché con Redis y realicé pruebas de carga integrales para identificar y resolver cuellos de botella, asegurando respuesta óptima del sistema bajo condiciones de alto tráfico."
+        ]
     },
     {
-        id: '4',
+        id: '5',
         'title-en': 'CryptoPlantsClub - NFTgames',
         'title-es': 'CryptoPlantsClub - NFTgames',
         "description-en": "Frontend development of a NFT game, including layout, functionality development and optimization for different devices.",
@@ -160,12 +260,19 @@ export const projects: Project[] = [
         image: "project-4.webp",
         "stack-tech": ['JavaScript', 'CSS', 'HTML','Git'],
         state: "public",
-        images: ['project-4-1.webp'],
+        images: ['project-4.webp','project-4-1.webp', 'project-4-video.webm', ],
         video: 'project-4-video.webm',
-        "firstParagraph-en": 'As a freelance frontend developer, I worked on an NFT game project during the cryptocurrency boom. I was in charge of the complete layout of the interface, using HTML, CSS and JavaScript. In addition, I developed NFT purchase modules. I optimized the interface for different devices, ensuring a consistent user experience.',
-        "firstParagraph-es": 'Como desarrollador frontend  freelance, trabajé en un proyecto de juego NFT durante el auge de las criptomonedas. Me encargué de la maquetación completa de la interfaz, utilizando HTML, CSS y JavaScript. Además, desarrollé módulos de compra de NFT. Optimicé la interfaz para diferentes dispositivos, garantizando una experiencia de usuario consistente.',
-        "secondParagraph-en": 'I created interactive filters to help users find the NFTs they were most interested in, and designed custom animations to enhance the aesthetics of the game. I communicated with the game`s API to get real-time data about NFTs, such as sales statistics and rarities. I used Vanilla JS to build everything.',
-        "secondParagraph-es": 'Creé filtros interactivos para ayudar a los usuarios a encontrar los NFTs que más les interesaban, y diseñé animaciones personalizadas para mejorar la estética del juego. Me comuniqué con la API del juego para obtener datos en tiempo real sobre los NFTs, como estadísticas de ventas y rarezas. Utilicé Vainilla JS para construir todo.',
-        
+        "main-impact-en": "Developed and optimized core modules for Web3 NFT gaming platform on Binance Smart Chain, enhancing game performance, user accessibility, and implementing blockchain-based gaming solutions that met complex design and functionality requirements.",
+        "main-impact-es": "Desarrollé y optimicé módulos centrales para plataforma de gaming NFT Web3 en Binance Smart Chain, mejorando el rendimiento del juego, accesibilidad del usuario e implementando soluciones de gaming basadas en blockchain que cumplieron con complejos requisitos de diseño y funcionalidad.",
+        "work-highlights-en": [
+            "Developed and managed several key modules of NFT game infrastructure operating on Binance Smart Chain, creating robust blockchain gaming architecture and ensuring seamless integration with Web3 protocols and smart contract functionality.",
+            "Optimized comprehensive user experience by improving game performance metrics and enhancing accessibility features, resulting in smoother gameplay mechanics and broader user adoption across diverse gaming demographics.",
+            "Implemented innovative blockchain-based solutions and smart contract integrations to ensure the game met complex design specifications and functionality requirements, delivering cutting-edge Web3 gaming experiences that aligned with project vision and technical standards."
+        ],
+        "work-highlights-es": [
+            "Desarrollé y gestioné varios módulos clave de la infraestructura del juego NFT operando en Binance Smart Chain, creando arquitectura robusta de gaming blockchain y asegurando integración fluida con protocolos Web3 y funcionalidad de contratos inteligentes.",
+            "Optimicé la experiencia integral del usuario mejorando métricas de rendimiento del juego y potenciando características de accesibilidad, resultando en mecánicas de juego más fluidas y mayor adopción de usuarios en diversas demografías gaming.",
+            "Implementé soluciones innovadoras basadas en blockchain e integraciones de contratos inteligentes para asegurar que el juego cumpliera con especificaciones de diseño complejas y requisitos de funcionalidad, entregando experiencias de gaming Web3 de vanguardia alineadas con la visión del proyecto y estándares técnicos."
+        ]
     },
 ]
