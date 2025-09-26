@@ -46,21 +46,19 @@ export const projects: Project[] = [
         image: "project-5.webp",
         state: "private",
         images: ['project-5.webp', 'project-5-1.webp', 'project-5-2.webp', 'project-5-3.webp'],
-        "main-impact-en": "Modernized B2B/B2C applications through strategic component migration and financial platform development, achieving 8% performance improvement while implementing comprehensive virtual and physical card management systems.",
-        "main-impact-es": "Modernizé aplicaciones B2B/B2C mediante migración estratégica de componentes y desarrollo de plataforma financiera, logrando una mejora del 8% en rendimiento mientras implementaba sistemas completos de gestión de tarjetas virtuales y físicas.",
+        "main-impact-en": "Leading developer in SmartCard Limits and optimization of financial application performance.",
+        "main-impact-es": "Desarrollador líder en SmartCard Limits y optimización del rendimiento de aplicaciones financieras.",
         "work-highlights-en": [
-            "Developed and maintained B2B and B2C web and mobile applications using Vue3 and Vue2 (NativeScript) with Clean Architecture, ensuring scalable and maintainable code structure across multiple platforms.",
-            "Successfully migrated 8 key components and refactored legacy code, improving application performance by 8% and accelerating new feature delivery through enhanced code efficiency and modernization.",
-            "Implemented comprehensive virtual and physical card functionalities from scratch, including purchase limit configuration and transaction management systems, enabling complete financial card lifecycle management.",
-            "Resolved medium, high, and urgent severity incidents with precision, maintaining system stability and ensuring continuous service availability for critical business operations.",
-            "Optimized development processes by implementing contextualized AI agents with architecture and technical documentation, significantly reducing integration times and improving development workflow efficiency."
+            "I led the \"SmartCard Limits\" project, developing a comprehensive system for controlling daily and monthly limits for ATMs, physical stores, and online purchases using virtual and physical cards, which gave users complete control and enhanced the product experience.",
+            "I modernized the architecture by migrating more than 10 critical components and refactoring legacy code, achieving an 8% increase in application performance and a reduction in the time-to-market for new features.",
+            "I managed and resolved incidents of medium, high, and urgent severity, ensuring the operational continuity of the system and customer confidence in critical environments.",
+            "I introduced AI agents contextualized with the architecture and technical documentation, optimizing development and integration processes and significantly reducing delivery times for new features."
         ],
         "work-highlights-es": [
-            "Desarrollé y mantuve aplicaciones web y móviles B2B y B2C utilizando Vue3 y Vue2 (NativeScript) con Arquitectura Limpia, asegurando una estructura de código escalable y mantenible en múltiples plataformas.",
-            "Migré exitosamente 8 componentes clave y refactoricé código legacy, mejorando el rendimiento de la aplicación en un 8% y acelerando la entrega de nuevas funcionalidades mediante mayor eficiencia y modernización del código.",
-            "Implementé funcionalidades completas para tarjetas virtuales y físicas desde cero, incluyendo configuración de límites de compra y sistemas de gestión de transacciones, habilitando la gestión integral del ciclo de vida de tarjetas financieras.",
-            "Resolví incidentes de gravedad media, alta y urgente con precisión, manteniendo la estabilidad del sistema y asegurando la disponibilidad continua del servicio para operaciones críticas del negocio.",
-            "Optimicé procesos de desarrollo implementando agentes de IA contextualizados con arquitectura y documentación técnica, reduciendo significativamente los tiempos de integración y mejorando la eficiencia del flujo de trabajo de desarrollo."
+            "Lideré el proyecto \"SmartCard Limits\", desarrollando un sistema integral de control de límites diarios y mensuales para ATM, comercios físicos y compras online en tarjetas virtuales y físicas, lo que otorgó control total al usuario y elevó la experiencia del producto.",
+            "Modernicé la arquitectura al migrar más de 10 componentes críticos y refactorizar código legacy, logrando un aumento del 8% en el rendimiento de la aplicación y una reducción en el time-to-market de nuevas funcionalidades.",
+            "Gestioné y resolví incidentes de severidad media, alta y urgente, asegurando la continuidad operativa del sistema y la confianza de los clientes en entornos críticos.",
+            "Introduje agentes de IA contextualizados con la arquitectura y documentación técnica, optimizando los procesos de desarrollo e integración y reduciendo significativamente los tiempos de entrega de nuevas funcionalidades."
         ]
     //     timeline: [
     //         {
@@ -113,21 +111,19 @@ export const projects: Project[] = [
         image: "project-1.webp",
         state: "private",
         images: ['project-1.webp','project-1-1.webp', 'project-1-2.webp', 'project-1-3.webp'],
-        "main-impact-en": "Led the complete development of PSD project suite comprising three interconnected web applications with modular architecture, implementing critical financial functionalities and establishing robust CI/CD infrastructure for long-term scalability.",
-        "main-impact-es": "Lideré el desarrollo completo de la suite del proyecto PSD compuesta por tres aplicaciones web interconectadas con arquitectura modular, implementando funcionalidades financieras críticas y estableciendo infraestructura CI/CD robusta para escalabilidad a largo plazo.",
+        "main-impact-en": "Technical leader in building a scalable digital banking suite.",
+        "main-impact-es": "Líder técnico en construcción de una suite bancaria digital escalable.",
         "work-highlights-en": [
-            "Led the PSD project from conception to deployment, developing a complete suite of three web applications (front office, back office, and personal banking) with modular and scalable architecture, establishing the foundation for comprehensive financial service management.",
-            "Implemented Clean Architecture by dividing the system into independent layers, facilitating future expansions and ensuring long-term project maintainability through separation of concerns and modular design principles.",
-            "Developed critical financial functionalities including secure user authentication, real-time data management, comprehensive transfer system, and complete CRUD operations for recipient management, enabling full banking operation capabilities.",
-            "Created dynamic data visualizations with interactive charts and established robust API Gateway integration, providing users with intuitive financial insights and ensuring seamless communication between system components.",
-            "Implemented comprehensive development infrastructure using Pinia for global state management, Vitest for unit testing, and GitLab CI/CD pipeline, guaranteeing code quality, system stability, and automated deployment processes."
+            "I led the PSD project, developing from scratch a suite of three web applications (front office, back office, and personal banking) that laid the foundations for a scalable digital ecosystem for the organization.",
+            "I designed a modular architecture based on Clean Architecture principles, enabling rapid expansion and more agile long-term maintenance.",
+            "I drove the creation of a scalable and reusable user interface, improving visual consistency and accelerating the delivery of new features.",
+            "I developed critical features such as authentication, real-time transfers, and interactive visualizations, ensuring reliability and a better user experience."
         ],
-        "work-highlights-es": [
-            "Lideré el proyecto PSD desde la concepción hasta el despliegue, desarrollando una suite completa de tres aplicaciones web (front office, back office y banca personas) con arquitectura modular y escalable, estableciendo la base para la gestión integral de servicios financieros.",
-            "Implementé Clean Architecture dividiendo el sistema en capas independientes, facilitando expansiones futuras y asegurando el mantenimiento a largo plazo del proyecto mediante separación de responsabilidades y principios de diseño modular.",
-            "Desarrollé funcionalidades financieras críticas incluyendo autenticación segura de usuarios, gestión de datos en tiempo real, sistema integral de transferencias y operaciones CRUD completas para gestión de destinatarios, habilitando capacidades completas de operación bancaria.",
-            "Creé visualizaciones dinámicas de datos con gráficos interactivos y establecí integración robusta con API Gateway, proporcionando a los usuarios insights financieros intuitivos y asegurando comunicación fluida entre componentes del sistema.",
-            "Implementé infraestructura de desarrollo integral utilizando Pinia para gestión de estado global, Vitest para pruebas unitarias y pipeline CI/CD con GitLab, garantizando calidad del código, estabilidad del sistema y procesos de despliegue automatizados."
+            "work-highlights-es": [
+            "Lideré el proyecto PSD, desarrollando desde cero una suite de tres aplicaciones web (front office, back office y banca personas) que sentó las bases de un ecosistema digital escalable para la organización.",
+            "Diseñé una arquitectura modular bajo principios de Clean Architecture, permitiendo expansiones rápidas y un mantenimiento más ágil a largo plazo.",
+            "Impulsé la creación de una interfaz de usuario escalable y reutilizable, mejorando la consistencia visual y acelerando la entrega de nuevas funcionalidades.",
+            "Desarrollé funcionalidades críticas como autenticación, transferencias en tiempo real y visualizaciones interactivas, garantizando confiabilidad y una mejor experiencia de usuario."
         ]
     //     timeline: [
     //         {
@@ -180,17 +176,17 @@ export const projects: Project[] = [
         "stack-tech": ['React','Sass','TypeScript','Git',],
         state: "private",
         images: ['project-2.webp','project-2-1.webp','project-2-2.webp','project-2-3.webp',],
-        "main-impact-en": "Enhanced government web application accessibility and user experience through responsive interface development, intelligent geolocation services, and automated customer service integration, modernizing citizen digital interaction with government services.",
-        "main-impact-es": "Mejoré la accesibilidad y experiencia de usuario de aplicación web gubernamental mediante desarrollo de interfaces responsive, servicios inteligentes de geolocalización e integración de atención al cliente automatizada, modernizando la interacción digital ciudadana con servicios gubernamentales.",
+        "main-impact-en": "GovTech technical leader in digitization and automation of procedures.",
+        "main-impact-es": "Líder técnico GovTech en digitalización y automatización de trámites.",
         "work-highlights-en": [
-            "Developed comprehensive responsive interfaces for government web application, ensuring optimal user experience across all devices and screen sizes, improving accessibility and citizen engagement with government digital services.",
-            "Implemented advanced geolocation system using Google Maps API to enable efficient location of nearby notaries, streamlining citizen access to essential legal services through intelligent geographic search capabilities.",
-            "Developed complete chatbot interface integrated with Dialogflow, optimizing automated customer service and providing 24/7 citizen support, reducing response times and improving overall service quality for government inquiries."
+            "I developed a document management system that optimized the user experience, from entering personal information to managing payments and selecting a notary, streamlining the document process.",
+            "I implemented a comprehensive administrative panel that allowed for the control and supervision of all procedures and users registered on the platform, facilitating the creation, modification, and tracking of procedures.",
+            "I ensured the quality of the code and the stability of the project through unit and integration testing, guaranteeing that all elements of the system functioned efficiently and without errors."
         ],
         "work-highlights-es": [
-            "Desarrollé interfaces responsive integrales para aplicación web gubernamental, asegurando experiencia de usuario óptima en todos los dispositivos y tamaños de pantalla, mejorando la accesibilidad y participación ciudadana con servicios digitales gubernamentales.",
-            "Implementé sistema de geolocalización avanzado utilizando Google Maps API para permitir localización eficiente de notarías cercanas, agilizando el acceso ciudadano a servicios legales esenciales mediante capacidades inteligentes de búsqueda geográfica.",
-            "Desarrollé interfaz completa de chatbot integrada con Dialogflow, optimizando la atención al cliente automatizada y proporcionando soporte ciudadano 24/7, reduciendo tiempos de respuesta y mejorando la calidad general del servicio para consultas gubernamentales."
+            "Desarrollé un sistema de gestión de trámites que optimizó la experiencia del usuario, desde el ingreso de información personal hasta la gestión de pagos y selección de notario, agilizando el proceso de trámites.",
+            "Implementé un panel administrativo completo, que permitió el control y supervisión de todos los trámites y usuarios registrados en la plataforma, facilitando la creación, modificación y seguimiento de trámites.",
+            "Aseguré la calidad del código y la estabilidad del proyecto mediante pruebas unitarias y de integración, garantizando que todos los elementos del sistema funcionaran de manera eficiente y sin errores."
         ]
         // timeline: [
         //     {
@@ -235,20 +231,20 @@ export const projects: Project[] = [
         "main-impact-en": "Architected and developed a complete e-commerce backend solution with secure authentication, advanced product management, and performance optimization, creating a scalable foundation for online retail operations.",
         "main-impact-es": "Arquitecturé y desarrollé una solución backend completa de e-commerce con autenticación segura, gestión avanzada de productos y optimización de rendimiento, creando una base escalable para operaciones de venta en línea.",
         "work-highlights-en": [
-        "Developed a complete backend infrastructure using Node.js, Express.js, and PostgreSQL for an online store, establishing a robust and scalable foundation for e-commerce operations with modern web technologies.",
-        "Implemented comprehensive authentication system with JWT tokens to protect user data and secure all application endpoints, ensuring data privacy and compliance with security best practices.",
-        "Designed and built RESTful API architecture for product catalog management, enabling full CRUD operations and advanced search functionality, streamlining inventory management and product discovery.",
-        "Integrated Sequelize ORM for efficient database interactions, improving code maintainability and development efficiency through object-relational mapping and query optimization.",
-        "Created user-centric features including favorites section and shopping cart functionality, securely storing user data and enabling seamless product management and purchase workflows.",
-        "Optimized application performance through Redis caching implementation and conducted comprehensive load testing to identify and resolve bottlenecks, ensuring optimal system responsiveness under high traffic conditions."
+            "Developed a complete backend infrastructure using Node.js, Express.js, and PostgreSQL for an online store, establishing a robust and scalable foundation for e-commerce operations with modern web technologies.",
+            "Implemented comprehensive authentication system with JWT tokens to protect user data and secure all application endpoints, ensuring data privacy and compliance with security best practices.",
+            "Designed and built RESTful API architecture for product catalog management, enabling full CRUD operations and advanced search functionality, streamlining inventory management and product discovery.",
+            "Integrated Sequelize ORM for efficient database interactions, improving code maintainability and development efficiency through object-relational mapping and query optimization.",
+            "Created user-centric features including favorites section and shopping cart functionality, securely storing user data and enabling seamless product management and purchase workflows.",
+            "Optimized application performance through Redis caching implementation and conducted comprehensive load testing to identify and resolve bottlenecks, ensuring optimal system responsiveness under high traffic conditions."
         ],
         "work-highlights-es": [
-        "Desarrollé una infraestructura backend completa utilizando Node.js, Express.js y PostgreSQL para una tienda en línea, estableciendo una base robusta y escalable para operaciones de e-commerce con tecnologías web modernas.",
-        "Implementé sistema de autenticación integral con tokens JWT para proteger datos de usuarios y asegurar todos los endpoints de la aplicación, garantizando privacidad de datos y cumplimiento de mejores prácticas de seguridad.",
-        "Diseñé y construí arquitectura API RESTful para gestión de catálogo de productos, habilitando operaciones CRUD completas y funcionalidad de búsqueda avanzada, optimizando la gestión de inventario y descubrimiento de productos.",
-        "Integré Sequelize ORM para interacciones eficientes con la base de datos, mejorando la mantenibilidad del código y eficiencia de desarrollo mediante mapeo objeto-relacional y optimización de consultas.",
-        "Creé funcionalidades centradas en el usuario incluyendo sección de favoritos y funcionalidad de carrito de compras, almacenando datos de usuarios de forma segura y habilitando flujos fluidos de gestión de productos y compras.",
-        "Optimicé el rendimiento de la aplicación mediante implementación de caché con Redis y realicé pruebas de carga integrales para identificar y resolver cuellos de botella, asegurando respuesta óptima del sistema bajo condiciones de alto tráfico."
+            "Desarrollé una infraestructura backend completa utilizando Node.js, Express.js y PostgreSQL para una tienda en línea, estableciendo una base robusta y escalable para operaciones de e-commerce con tecnologías web modernas.",
+            "Implementé sistema de autenticación integral con tokens JWT para proteger datos de usuarios y asegurar todos los endpoints de la aplicación, garantizando privacidad de datos y cumplimiento de mejores prácticas de seguridad.",
+            "Diseñé y construí arquitectura API RESTful para gestión de catálogo de productos, habilitando operaciones CRUD completas y funcionalidad de búsqueda avanzada, optimizando la gestión de inventario y descubrimiento de productos.",
+            "Integré Sequelize ORM para interacciones eficientes con la base de datos, mejorando la mantenibilidad del código y eficiencia de desarrollo mediante mapeo objeto-relacional y optimización de consultas.",
+            "Creé funcionalidades centradas en el usuario incluyendo sección de favoritos y funcionalidad de carrito de compras, almacenando datos de usuarios de forma segura y habilitando flujos fluidos de gestión de productos y compras.",
+            "Optimicé el rendimiento de la aplicación mediante implementación de caché con Redis y realicé pruebas de carga integrales para identificar y resolver cuellos de botella, asegurando respuesta óptima del sistema bajo condiciones de alto tráfico."
         ]
     },
     {
@@ -262,17 +258,17 @@ export const projects: Project[] = [
         state: "public",
         images: ['project-4.webp','project-4-1.webp', 'project-4-video.webm', ],
         video: 'project-4-video.webm',
-        "main-impact-en": "Developed and optimized core modules for Web3 NFT gaming platform on Binance Smart Chain, enhancing game performance, user accessibility, and implementing blockchain-based gaming solutions that met complex design and functionality requirements.",
-        "main-impact-es": "Desarrollé y optimicé módulos centrales para plataforma de gaming NFT Web3 en Binance Smart Chain, mejorando el rendimiento del juego, accesibilidad del usuario e implementando soluciones de gaming basadas en blockchain que cumplieron con complejos requisitos de diseño y funcionalidad.",
+        "main-impact-en": "Developer specializing in Web3 gaming and smart contracts.",
+        "main-impact-es": "Desarrollador especializado en gaming Web3 y contratos inteligentes.",
         "work-highlights-en": [
-            "Developed and managed several key modules of NFT game infrastructure operating on Binance Smart Chain, creating robust blockchain gaming architecture and ensuring seamless integration with Web3 protocols and smart contract functionality.",
-            "Optimized comprehensive user experience by improving game performance metrics and enhancing accessibility features, resulting in smoother gameplay mechanics and broader user adoption across diverse gaming demographics.",
-            "Implemented innovative blockchain-based solutions and smart contract integrations to ensure the game met complex design specifications and functionality requirements, delivering cutting-edge Web3 gaming experiences that aligned with project vision and technical standards."
+            "I developed and managed several key modules of the NFT game operated on the Binance network.",
+            "I optimized the user experience, improving both game performance and accessibility.",
+            "I implemented innovative solutions to ensure that the game met design and functionality requirements."
         ],
         "work-highlights-es": [
-            "Desarrollé y gestioné varios módulos clave de la infraestructura del juego NFT operando en Binance Smart Chain, creando arquitectura robusta de gaming blockchain y asegurando integración fluida con protocolos Web3 y funcionalidad de contratos inteligentes.",
-            "Optimicé la experiencia integral del usuario mejorando métricas de rendimiento del juego y potenciando características de accesibilidad, resultando en mecánicas de juego más fluidas y mayor adopción de usuarios en diversas demografías gaming.",
-            "Implementé soluciones innovadoras basadas en blockchain e integraciones de contratos inteligentes para asegurar que el juego cumpliera con especificaciones de diseño complejas y requisitos de funcionalidad, entregando experiencias de gaming Web3 de vanguardia alineadas con la visión del proyecto y estándares técnicos."
+            "Desarrollé y gestioné varios módulos clave del juego NFT operado en la red Binance.",
+            "Optimicé la experiencia del usuario, mejorando tanto el rendimiento del juego como la accesibilidad.",
+            "Implementé soluciones innovadoras para asegurar que el juego cumpliera con los requisitos de diseño y funcionalidad."
         ]
     },
 ]
