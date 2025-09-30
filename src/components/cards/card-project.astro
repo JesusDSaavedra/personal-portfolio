@@ -1,5 +1,4 @@
 ---
-import ContributionIcon from '@/icons/contribution.icon.astro'
 import type { Project } from '../../content/projects'
 import { technologies } from '@/content/technologies'
 import { Image } from 'astro:assets'
@@ -9,15 +8,11 @@ interface Props {
   isPageWork: boolean
 }
 
-const { project, isPageWork } = Astro.props
+const { project } = Astro.props
 const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
 const {
   [`title-${lang}` as 'title-en' | 'title-es']: title,
-  [`description-${lang}` as 'description-en' | 'description-es']: description,
-  image,
-  id,
-  state,
-  year
+  [`description-${lang}` as 'description-en' | 'description-es']: description
 } = project
 ---
 

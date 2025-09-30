@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 interface Props {
   title: string
@@ -25,7 +25,7 @@ const { currentLocale } = Astro
       rel="stylesheet"
     />
     <title>{title}</title>
-    <ViewTransitions fallback="none" />
+    <ClientRouter fallback="none" />
   </head>
   <body class="p-0 m-0 text-dark dark:bg-[var(--black)] dark:text-[var(--white-text)]">
     <slot />

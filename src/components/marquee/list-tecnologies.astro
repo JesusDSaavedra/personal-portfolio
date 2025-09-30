@@ -12,7 +12,7 @@ import CardTech from './card-tech.astro'
     {
       Object.values(technologies)
         .sort((a, b) => a.order - b.order)
-        .map((item, index) => {
+        .map((item) => {
           const { title, Icon } = item
           return <CardTech title={title.toUpperCase()} Icon={Icon} />
         })
