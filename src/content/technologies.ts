@@ -18,7 +18,8 @@ import {
     Sequelize,
     Vuejs,
     CSS,
-    HTML
+    HTML,
+    Angular
 } from '../icons/icons-programming'
 
 
@@ -58,6 +59,11 @@ export const technologies = {
         title: 'Vue.js',
         Icon: Vuejs,
         order: 5
+    },
+    Angular: {
+        title: 'Angular',
+        Icon: Angular,
+        order: 20
     },
     Storybook: {
         title: 'Storybook',

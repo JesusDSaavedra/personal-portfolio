@@ -43,6 +43,14 @@ export const technologiesAndFrameworks: TechnologyAndFramework[] = [
     'Es un framework de Javascript que utiliza "alto desacoplamiento", lo que permite crear progresivamente interfaces de usuario.'
   },
   {
+    name: 'Angular',
+    logo: '/angular.webp',
+    url: 'https://angular.io/',
+    'description-en': 'It is a TypeScript-based framework for building scalable web applications with a complete set of tools and features.',
+    'description-es':
+      'Es un framework basado en TypeScript para construir aplicaciones web escalables con un conjunto completo de herramientas y características.'
+  },
+  {
     name: 'Flutter',
     logo: '/flutter.webp',
     url: 'https://flutter.dev/',
